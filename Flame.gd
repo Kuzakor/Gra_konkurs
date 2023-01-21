@@ -9,8 +9,6 @@ onready var global = get_node("/root/Global")
 func _physics_process(delta):
 	if len(get_colliding_bodies()) > 0:
 		global.health -= 1
-		global.im = true
-		print(global.health)
 		
 		
 

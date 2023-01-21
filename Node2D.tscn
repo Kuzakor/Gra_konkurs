@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://portalRings2.png" type="Texture" id=1]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=2]
@@ -8,7 +8,13 @@
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" type="Texture" id=6]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Wall Jump (32x32).png" type="Texture" id=7]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" type="Texture" id=8]
-[ext_resource path="res://Free/HealthUI.png" type="Texture" id=9]
+[ext_resource path="res://Health.gd" type="Script" id=9]
+[ext_resource path="res://Health bar/greenbar (6).png" type="Texture" id=10]
+[ext_resource path="res://Health bar/greenbar (3).png" type="Texture" id=11]
+[ext_resource path="res://Health bar/greenbar (1).png" type="Texture" id=12]
+[ext_resource path="res://Health bar/greenbar (4).png" type="Texture" id=13]
+[ext_resource path="res://Health bar/greenbar (5).png" type="Texture" id=14]
+[ext_resource path="res://Health bar/greenbar (2).png" type="Texture" id=15]
 
 [sub_resource type="PhysicsMaterial" id=7]
 friction = 0.5
@@ -215,6 +221,16 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 1 ]
 }
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=18]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 0, -1 )
@@ -678,10 +694,14 @@ playback_speed = 1.25
 anims/Portal = SubResource( 10 )
 anims/RESET = SubResource( 11 )
 
-[node name="Health" type="StaticBody2D" parent="."]
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+mode = 1
+script = ExtResource( 9 )
 
-[node name="HealthUi" type="Sprite" parent="Health"]
-position = Vector2( 83.75, 30.25 )
-scale = Vector2( 2.68182, 2.31818 )
-texture = ExtResource( 9 )
-vframes = 7
+[node name="AnimatedSprite" type="AnimatedSprite" parent="RigidBody2D2"]
+position = Vector2( 179.75, 98.75 )
+scale = Vector2( 2.15517, 1.46552 )
+frames = SubResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource( 18 )

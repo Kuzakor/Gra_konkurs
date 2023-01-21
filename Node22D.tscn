@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -10,8 +10,13 @@
 [ext_resource path="res://Flame.gd" type="Script" id=8]
 [ext_resource path="res://Finish.gd" type="Script" id=9]
 [ext_resource path="res://portalRings2.png" type="Texture" id=10]
-[ext_resource path="res://Free/HealthUI.png" type="Texture" id=11]
+[ext_resource path="res://Health bar/greenbar (6).png" type="Texture" id=11]
 [ext_resource path="res://Health.gd" type="Script" id=12]
+[ext_resource path="res://Health bar/greenbar (1).png" type="Texture" id=13]
+[ext_resource path="res://Health bar/greenbar (4).png" type="Texture" id=14]
+[ext_resource path="res://Health bar/greenbar (5).png" type="Texture" id=15]
+[ext_resource path="res://Health bar/greenbar (2).png" type="Texture" id=16]
+[ext_resource path="res://Health bar/greenbar (3).png" type="Texture" id=17]
 
 [sub_resource type="PhysicsMaterial" id=1]
 rough = true
@@ -224,6 +229,16 @@ tracks/0/keys = {
 
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 124.438, 23 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=18]
 
 [node name="Node2D" type="Node2D"]
 
@@ -453,7 +468,7 @@ position = Vector2( -447, 579 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Floor"]
-position = Vector2( -451, -21 )
+position = Vector2( -426, -27 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Floor"]
@@ -540,7 +555,6 @@ texture = ExtResource( 7 )
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D8"]
 position = Vector2( 754, 90 )
 rotation = -1.27584
-scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="StaticBody2D" type="RigidBody2D" parent="."]
@@ -733,12 +747,14 @@ shape = SubResource( 13 )
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+mode = 1
 script = ExtResource( 12 )
 
-[node name="Health" type="Sprite" parent="Area2D2"]
-position = Vector2( 124, 40.1161 )
-scale = Vector2( 4.50758, 3.25162 )
-texture = ExtResource( 11 )
-vframes = 7
-script = ExtResource( 12 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="RigidBody2D2"]
+position = Vector2( 179.75, 98.75 )
+scale = Vector2( 2.15517, 1.46552 )
+frames = SubResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource( 18 )
