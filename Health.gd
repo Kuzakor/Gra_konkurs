@@ -25,7 +25,7 @@ func _process(delta):
 		50:
 			$AnimatedSprite.set_frame(5)
 		0:
-			print("NIE ŻYJESZ")
+			get_tree().change_scene("res://You dead screen.tscn")
 #
 #
 #	
