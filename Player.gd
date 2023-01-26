@@ -15,17 +15,21 @@ func _ready():
 
 func _physics_process(delta):
 	var a = Vector2.ZERO
+	a.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	if Input.is_action_just_pressed("ui_up") and len(get_colliding_bodies()) > 0:
 		a.y = -1
 		#$AnimationPlayer.play("Jump")
-	a.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	if a != Vector2.ZERO:
 		vel = a
 		$AnimationPlayer.play("Run")
+		self.sleeping = false
 	else:
 		vel = Vector2.ZERO
 		$AnimationPlayer.play("Idle")
+		if len(get_colliding_bodies()) > 0:
+			self.sleeping = true 
 	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 600 , vel.y *delta*18000))
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

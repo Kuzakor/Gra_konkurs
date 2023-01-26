@@ -8,7 +8,6 @@ extends RigidBody2D
 onready var global = get_node("/root/Global")
 # Called when the node enters the scene tree for the first time.
 	 # Replace with function body.
-
 func _process(delta):
 	print(global.health)
 	match global.health:

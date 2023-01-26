@@ -21,7 +21,7 @@ friction = 0.5
 rough = true
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 14.5, 12.625 )
+extents = Vector2( 16, 20.0781 )
 
 [sub_resource type="Animation" id=13]
 resource_name = "Idle"
@@ -62,6 +62,30 @@ tracks/2/keys = {
 "update": 1,
 "values": [ 11 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.186523, 0.216797 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 84, -13 ) ]
+}
 
 [sub_resource type="Animation" id=14]
 length = 0.001
@@ -101,6 +125,30 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 12 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.186523, 0.216797 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 84, -13 ) ]
+}
 
 [sub_resource type="Animation" id=15]
 resource_name = "Run"
@@ -139,6 +187,30 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 85, -8 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.382812, 0.421387 ) ]
 }
 
 [sub_resource type="Animation" id=16]
@@ -250,12 +322,13 @@ contact_monitor = true
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D"]
-position = Vector2( 7, -4 )
+position = Vector2( 84, -13 )
+scale = Vector2( 0.186523, 0.216797 )
 texture = ExtResource( 6 )
 hframes = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2( 7, -0.375 )
+position = Vector2( 84, -6.92188 )
 shape = SubResource( 8 )
 
 [node name="Timer" type="Timer" parent="RigidBody2D"]
@@ -676,7 +749,8 @@ mode = 1
 script = ExtResource( 9 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="RigidBody2D2"]
-position = Vector2( 297, 234 )
+position = Vector2( 133, 109 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
