@@ -312,7 +312,7 @@ __meta__ = {
 }
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( 112, 544 )
+position = Vector2( 112, 540 )
 input_pickable = true
 mode = 2
 physics_material_override = SubResource( 7 )
@@ -740,7 +740,7 @@ rotation = 1.5708
 shape = SubResource( 12 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Obstacles/Floor"]
-position = Vector2( -1021, 306 )
+position = Vector2( -1021, 305 )
 rotation = 1.5708
 shape = SubResource( 12 )
 

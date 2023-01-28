@@ -15,19 +15,19 @@ func _ready():
 
 func _physics_process(delta):
 	var a = Vector2.ZERO
+	# (0, 0) 
 	a.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	if Input.is_action_just_pressed("ui_up") and len(get_colliding_bodies()) > 0:
 		a.y = -1
-		#$AnimationPlayer.play("Jump")
 	if a != Vector2.ZERO:
 		vel = a
 		$AnimationPlayer.play("Run")
-		self.sleeping = false
+		self.physics_material_override.friction = 0.5 
 	else:
 		vel = Vector2.ZERO
 		$AnimationPlayer.play("Idle")
 		if len(get_colliding_bodies()) > 0:
-			self.sleeping = true 
+			self.physics_material_override.friction = 1000 
 	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 600 , vel.y *delta*18000))
 	
 

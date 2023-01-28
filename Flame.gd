@@ -8,7 +8,7 @@ onready var global = get_node("/root/Global")
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
 	if len(get_colliding_bodies()) > 0:
-		global.health -= 1
+		global.health -= 10
 		
 		
 
