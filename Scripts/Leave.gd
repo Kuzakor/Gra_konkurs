@@ -16,6 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_Area2D2_input_event(viewport, event, shape_idx):
+func _on_Leave_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		get_tree().change_scene("res://Settings.tscn")
+		get_tree().change_scene("res://Scenes/menu.tscn") # Replace with function body.

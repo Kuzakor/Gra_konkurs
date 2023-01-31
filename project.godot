@@ -11,14 +11,14 @@ config_version=4
 [application]
 
 config/name="Zadanie_platformer"
-run/main_scene="res://menu.tscn"
+run/main_scene="res://Scenes/menu.tscn"
 config/icon="res://icon.png"
 run/size/height=600
 
 [autoload]
 
-Global="*res://global.gd"
-Music="*res://Music.tscn"
+Global="*res://Scripts/global.gd"
+Music="*res://Scenes/Music.tscn"
 
 [display]
 

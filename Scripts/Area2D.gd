@@ -11,7 +11,6 @@ func _ready():
 	pass # Replace with function body.
 	
 onready var global = get_node("/root/Global")
-
 func _process(delta):
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,7 +21,7 @@ func _process(delta):
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		global.health = 300
-		get_tree().change_scene("res://Node2D.tscn")
+		get_tree().change_scene("res://Scenes/Node2D.tscn")
 		
 		
 

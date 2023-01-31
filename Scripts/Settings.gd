@@ -10,10 +10,11 @@ extends Area2D
 func _ready():
 	pass # Replace with function body.
 
-onready var music = get_node("/root/Music")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-func _on_Area2D_input_event(viewport, event, shape_idx):
+
+func _on_Area2D2_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		music.get_node("AudioStreamPlayer").volume_db -= 5
+		get_tree().change_scene("res://Scenes/Settings.tscn")

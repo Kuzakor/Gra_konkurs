@@ -19,6 +19,7 @@ func _physics_process(delta):
 	a.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	if Input.is_action_just_pressed("ui_up") and len(get_colliding_bodies()) > 0:
 		a.y = -1
+		$AudioStreamPlayer.play()
 	if a != Vector2.ZERO:
 		vel = a
 		$AnimationPlayer.play("Run")

@@ -10,11 +10,13 @@ extends Area2D
 func _ready():
 	pass # Replace with function body.
 
-
+onready var music = get_node("/root/Music")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
+func _on_Music_low_input_event(viewport, event, shape_idx):
+	if (event is InputEventMouseButton && event.pressed):
+		music.get_node("AudioStreamPlayer").volume_db -= 5 # Replace with function body.
 
-func _on_Area2D_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.
+
