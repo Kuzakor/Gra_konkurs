@@ -18,6 +18,7 @@ run/size/height=600
 [autoload]
 
 Global="*res://global.gd"
+Music="*res://Music.tscn"
 
 [display]
 

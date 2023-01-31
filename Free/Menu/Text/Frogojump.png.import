@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Screenshot_7.png-b1f1abf01b9504563a7b7c781f0a79ee.stex"
+path="res://.import/Frogojump.png-a2dd584245c54c275f4553b420500b7b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Screenshot_7.png"
-dest_files=[ "res://.import/Screenshot_7.png-b1f1abf01b9504563a7b7c781f0a79ee.stex" ]
+source_file="res://Free/Menu/Text/Frogojump.png"
+dest_files=[ "res://.import/Frogojump.png-a2dd584245c54c275f4553b420500b7b.stex" ]
 
 [params]
 
