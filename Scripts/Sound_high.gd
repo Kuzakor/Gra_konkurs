@@ -10,13 +10,14 @@ extends Area2D
 func _ready():
 	pass # Replace with function body.
 
-onready var music = get_node("/root/Music")
-onready var global = get_node("/root/Global")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+onready var global = get_node("/root/Global")
 
-
-func _on_Music_high_input_event(viewport, event, shape_idx):
+func _on_Sound_high_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		music.get_node("AudioStreamPlayer").volume_db += 5
+		global.sound += 5 # Replace with function body.
+		$AudioStreamPlayer.volume_db = global.sound
+		$AudioStreamPlayer.play()
