@@ -19,4 +19,6 @@ onready var global = get_node("/root/Global")
 
 func _on_Sound_low_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		pass # Replace with function body.
+		global.sound -= 5 # Replace with function body.
+		$AudioStreamPlayer.volume_db = global.sound
+		$AudioStreamPlayer.play()

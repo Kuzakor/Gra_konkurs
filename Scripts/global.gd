@@ -5,7 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 var health = 300
-var sound
+var sound = 1
 		 
 	
 

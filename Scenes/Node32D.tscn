@@ -1,41 +1,38 @@
 [gd_scene load_steps=37 format=2]
 
-[ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Flame.gd" type="Script" id=2]
-[ext_resource path="res://Free/Terrain/Terrain (16x16).png" type="Texture" id=3]
-[ext_resource path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" type="Texture" id=4]
-[ext_resource path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" type="Texture" id=5]
-[ext_resource path="res://Free/Main Characters/Ninja Frog/Wall Jump (32x32).png" type="Texture" id=6]
-[ext_resource path="res://Free/Traps/Fire/On (16x32).png" type="Texture" id=7]
-[ext_resource path="res://Scripts/Finish2.gd" type="Script" id=8]
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=9]
-[ext_resource path="res://Free/Items/Checkpoints/End/End (Pressed) (64x64).png" type="Texture" id=10]
-[ext_resource path="res://Health bar/greenbar (6).png" type="Texture" id=11]
-[ext_resource path="res://Scripts/Health.gd" type="Script" id=12]
-[ext_resource path="res://Health bar/greenbar (1).png" type="Texture" id=13]
-[ext_resource path="res://Health bar/greenbar (4).png" type="Texture" id=14]
-[ext_resource path="res://Health bar/greenbar (5).png" type="Texture" id=15]
-[ext_resource path="res://Health bar/greenbar (2).png" type="Texture" id=16]
-[ext_resource path="res://Health bar/greenbar (3).png" type="Texture" id=17]
-[ext_resource path="res://Free/Music/cartoon-jump-6462.mp3" type="AudioStream" id=18]
-[ext_resource path="res://Free/Music/jump-climb-or-damage-sound-f-95942.mp3" type="AudioStream" id=19]
-[ext_resource path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" type="Texture" id=20]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" type="Texture" id=1]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Wall Jump (32x32).png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Health.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Finish.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Flame.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=6]
+[ext_resource path="res://Health bar/greenbar (2).png" type="Texture" id=7]
+[ext_resource path="res://Health bar/greenbar (1).png" type="Texture" id=8]
+[ext_resource path="res://Health bar/greenbar (3).png" type="Texture" id=9]
+[ext_resource path="res://Health bar/greenbar (4).png" type="Texture" id=10]
+[ext_resource path="res://Health bar/greenbar (5).png" type="Texture" id=11]
+[ext_resource path="res://Free/Music/cartoon-jump-6462.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Free/Music/jump-climb-or-damage-sound-f-95942.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Health bar/greenbar (6).png" type="Texture" id=14]
+[ext_resource path="res://Free/Terrain/Terrain (16x16).png" type="Texture" id=15]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" type="Texture" id=16]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" type="Texture" id=17]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=18]
+[ext_resource path="res://Free/Traps/Fire/On (16x32).png" type="Texture" id=19]
+[ext_resource path="res://Free/Items/Checkpoints/End/End (Pressed) (64x64).png" type="Texture" id=20]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 581, 23 )
 
-[sub_resource type="CapsuleShape2D" id=11]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 15.0
 height = 9.42221
 
-[sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 131.847, 25.0076 )
-
-[sub_resource type="CapsuleShape2D" id=14]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 23.0
 height = 10.0
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=4]
 resource_name = "END"
 length = 0.9
 loop = true
@@ -52,7 +49,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=5]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Blue:frame")
@@ -67,27 +64,27 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 124.438, 23 )
 
-[sub_resource type="SpriteFrames" id=17]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=18]
+[sub_resource type="CapsuleShape2D" id=8]
 
-[sub_resource type="PhysicsMaterial" id=19]
+[sub_resource type="PhysicsMaterial" id=9]
 friction = 0.0
 rough = true
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 16, 20.0781 )
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=11]
 resource_name = "Hit"
 length = 0.5
 tracks/0/type = "value"
@@ -100,7 +97,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 20 ) ]
+"values": [ ExtResource( 17 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:hframes")
@@ -139,7 +136,7 @@ tracks/3/keys = {
 "values": [ 2, 3, 4, 5, 6 ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=12]
 resource_name = "Idle"
 loop = true
 tracks/0/type = "value"
@@ -164,7 +161,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 1 ) ]
+"values": [ ExtResource( 18 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite:hframes")
@@ -203,7 +200,7 @@ tracks/4/keys = {
 "values": [ Vector2( 84, -13 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=13]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -227,7 +224,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 16 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite:hframes")
@@ -266,7 +263,7 @@ tracks/4/keys = {
 "values": [ Vector2( 84, -13 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=14]
 resource_name = "Run"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -278,7 +275,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 4 ) ]
+"values": [ ExtResource( 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:hframes")
@@ -329,7 +326,7 @@ tracks/4/keys = {
 "values": [ Vector2( 0.382812, 0.421387 ) ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=15]
 resource_name = "WallJump"
 length = 0.6
 tracks/0/type = "value"
@@ -342,7 +339,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:hframes")
@@ -369,6 +366,9 @@ tracks/2/keys = {
 "values": [ 1, 2, 3, 4, 4, 4 ]
 }
 
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 124.438, 23 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Floor" type="StaticBody2D" parent="."]
@@ -377,7 +377,7 @@ position = Vector2( 1025, 4 )
 [node name="Sprite2" type="Sprite" parent="Floor"]
 position = Vector2( -996, 582 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -385,7 +385,7 @@ frame = 1
 [node name="Sprite3" type="Sprite" parent="Floor"]
 position = Vector2( -946.5, 582 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -393,7 +393,7 @@ frame = 1
 [node name="Sprite4" type="Sprite" parent="Floor"]
 position = Vector2( -900, 583 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -401,7 +401,7 @@ frame = 1
 [node name="Sprite5" type="Sprite" parent="Floor"]
 position = Vector2( -850.5, 583 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -409,7 +409,7 @@ frame = 1
 [node name="Sprite6" type="Sprite" parent="Floor"]
 position = Vector2( -806, 583 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -417,7 +417,7 @@ frame = 1
 [node name="Sprite7" type="Sprite" parent="Floor"]
 position = Vector2( -756.5, 583 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -425,7 +425,7 @@ frame = 1
 [node name="Sprite8" type="Sprite" parent="Floor"]
 position = Vector2( -710, 584 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -433,7 +433,7 @@ frame = 1
 [node name="Sprite9" type="Sprite" parent="Floor"]
 position = Vector2( -660.5, 584 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -441,7 +441,7 @@ frame = 1
 [node name="Sprite10" type="Sprite" parent="Floor"]
 position = Vector2( -620, 584 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -449,7 +449,7 @@ frame = 1
 [node name="Sprite11" type="Sprite" parent="Floor"]
 position = Vector2( -570.5, 584 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -457,7 +457,7 @@ frame = 1
 [node name="Sprite12" type="Sprite" parent="Floor"]
 position = Vector2( -524, 585 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -465,7 +465,7 @@ frame = 1
 [node name="Sprite13" type="Sprite" parent="Floor"]
 position = Vector2( -474.5, 585 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -473,7 +473,7 @@ frame = 1
 [node name="Sprite14" type="Sprite" parent="Floor"]
 position = Vector2( -430, 585 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -481,7 +481,7 @@ frame = 1
 [node name="Sprite15" type="Sprite" parent="Floor"]
 position = Vector2( -380.5, 585 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -489,7 +489,7 @@ frame = 1
 [node name="Sprite16" type="Sprite" parent="Floor"]
 position = Vector2( -334, 586 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -497,7 +497,7 @@ frame = 1
 [node name="Sprite17" type="Sprite" parent="Floor"]
 position = Vector2( -284.5, 586 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -505,7 +505,7 @@ frame = 1
 [node name="Sprite18" type="Sprite" parent="Floor"]
 position = Vector2( -248, 586 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -513,7 +513,7 @@ frame = 1
 [node name="Sprite19" type="Sprite" parent="Floor"]
 position = Vector2( -198.5, 586 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -521,7 +521,7 @@ frame = 1
 [node name="Sprite20" type="Sprite" parent="Floor"]
 position = Vector2( -152, 587 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -529,7 +529,7 @@ frame = 1
 [node name="Sprite21" type="Sprite" parent="Floor"]
 position = Vector2( -102.5, 587 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -537,7 +537,7 @@ frame = 1
 [node name="Sprite22" type="Sprite" parent="Floor"]
 position = Vector2( -58, 587 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -545,7 +545,7 @@ frame = 1
 [node name="Sprite23" type="Sprite" parent="Floor"]
 position = Vector2( -8.5, 587 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -553,7 +553,7 @@ frame = 1
 [node name="Sprite" type="Sprite" parent="Floor"]
 position = Vector2( 87.5, 588 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
@@ -561,253 +561,154 @@ frame = 1
 [node name="Sprite24" type="Sprite" parent="Floor"]
 position = Vector2( 38, 588 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 1
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Floor"]
 position = Vector2( -447, 579 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Floor"]
 position = Vector2( -426, -27 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 0, 279 )
+position = Vector2( 10, 278 )
 rotation = 1.5708
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Floor"]
 position = Vector2( -1025, 257 )
 rotation = 1.5708
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="Flame4" type="RigidBody2D" parent="."]
 mode = 3
 contacts_reported = 10000
 contact_monitor = true
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="On(16X32)2" type="Sprite" parent="Flame4"]
-position = Vector2( 302, 544 )
-texture = ExtResource( 7 )
+position = Vector2( 250, 424 )
+rotation = -1.5708
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flame4"]
-position = Vector2( 301, 544 )
-rotation = 1.5708
-shape = SubResource( 11 )
+position = Vector2( 250, 423 )
+rotation = -1.5708
+shape = SubResource( 2 )
 
 [node name="Flame5" type="RigidBody2D" parent="."]
 mode = 3
 contacts_reported = 10000
 contact_monitor = true
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="On(16X32)3" type="Sprite" parent="Flame5"]
-position = Vector2( 490, 544 )
-texture = ExtResource( 7 )
+position = Vector2( 610, 432 )
+rotation = -1.5708
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Flame5"]
-position = Vector2( 486, 544 )
-rotation = 1.5708
-shape = SubResource( 11 )
+position = Vector2( 602, 432 )
+rotation = -1.5708
+shape = SubResource( 2 )
 
 [node name="Flame6" type="RigidBody2D" parent="."]
 mode = 3
 contacts_reported = 10000
 contact_monitor = true
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="On(16X32)4" type="Sprite" parent="Flame6"]
-position = Vector2( 730, 544 )
-texture = ExtResource( 7 )
+position = Vector2( 901, 432 )
+rotation = 1.5708
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Flame6"]
-position = Vector2( 730, 544 )
+position = Vector2( 901, 432 )
 rotation = 1.5708
-shape = SubResource( 11 )
+shape = SubResource( 2 )
 
 [node name="Flame7" type="RigidBody2D" parent="."]
 mode = 3
 contacts_reported = 10000
 contact_monitor = true
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="On(16X32)5" type="Sprite" parent="Flame7"]
 position = Vector2( 876, 544 )
-texture = ExtResource( 7 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Flame7"]
 position = Vector2( 873, 544 )
 rotation = 1.5708
-shape = SubResource( 11 )
+shape = SubResource( 2 )
 
 [node name="Flame8" type="RigidBody2D" parent="."]
 mode = 3
 contacts_reported = 10000
 contact_monitor = true
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="On(16X32)6" type="Sprite" parent="Flame8"]
-position = Vector2( 754, 91 )
-rotation = -2.9147
-texture = ExtResource( 7 )
+position = Vector2( 550, 425 )
+rotation = 1.5708
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Flame8"]
-position = Vector2( 754, 90 )
-rotation = -1.27584
-shape = SubResource( 11 )
+position = Vector2( 552, 424 )
+rotation = 1.5708
+shape = SubResource( 2 )
 
 [node name="Flame" type="RigidBody2D" parent="."]
 mode = 3
 contacts_reported = 10000
 contact_monitor = true
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="On(16X32)" type="Sprite" parent="Flame"]
-position = Vector2( 161, 544 )
-texture = ExtResource( 7 )
+position = Vector2( 182, 537 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flame"]
-position = Vector2( 161, 544 )
+position = Vector2( 179, 540 )
 rotation = 1.5708
-shape = SubResource( 11 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="Sprite5" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 357.539, 457.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite3" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 484.539, 307.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite4" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 451.539, 345.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite6" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 389.539, 418.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite7" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 422.539, 381.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2( 419.145, 375.335 )
-rotation = -0.87441
-shape = SubResource( 12 )
-
-[node name="Sprite8" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 592.539, 364.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite9" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 719.539, 214.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite10" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 686.539, 252.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite11" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 624.539, 325.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite12" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 657.539, 288.275 )
-rotation = -0.87441
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2( 654.145, 282.335 )
-rotation = -0.87441
-shape = SubResource( 12 )
+shape = SubResource( 2 )
 
 [node name="Area2D" type="RigidBody2D" parent="."]
 position = Vector2( 780, 384 )
 mode = 2
 contacts_reported = 5
 contact_monitor = true
-script = ExtResource( 8 )
+script = ExtResource( 4 )
 
 [node name="Blue" type="Sprite" parent="Area2D"]
 position = Vector2( 15.4, -27 )
 scale = Vector2( 1.1375, 1.625 )
-texture = ExtResource( 10 )
+texture = ExtResource( 20 )
 hframes = 8
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 15, -4 )
-shape = SubResource( 14 )
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
 pause_mode = 1
 autoplay = "END"
 playback_speed = 1.25
-anims/END = SubResource( 15 )
-anims/RESET = SubResource( 16 )
+anims/END = SubResource( 4 )
+anims/RESET = SubResource( 5 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
 [node name="Sprite5" type="Sprite" parent="StaticBody2D3"]
 position = Vector2( 755.5, 437 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 2
@@ -815,7 +716,7 @@ frame = 2
 [node name="Sprite3" type="Sprite" parent="StaticBody2D3"]
 position = Vector2( 659.5, 436 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 2
@@ -823,7 +724,7 @@ frame = 2
 [node name="Sprite4" type="Sprite" parent="StaticBody2D3"]
 position = Vector2( 706, 437 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 2
@@ -831,7 +732,7 @@ frame = 2
 [node name="Sprite6" type="Sprite" parent="StaticBody2D3"]
 position = Vector2( 792, 437 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 2
@@ -839,65 +740,112 @@ frame = 2
 [node name="Sprite7" type="Sprite" parent="StaticBody2D3"]
 position = Vector2( 841.5, 437 )
 scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 15 )
 hframes = 4
 vframes = 3
 frame = 2
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2( 755.75, 430 )
-shape = SubResource( 13 )
+shape = SubResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="."]
 mode = 1
-script = ExtResource( 12 )
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="RigidBody2D2"]
-position = Vector2( 128, 107 )
+position = Vector2( 128, 114 )
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 17 )
+frames = SubResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
-shape = SubResource( 18 )
+shape = SubResource( 8 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RigidBody2D2"]
-stream = ExtResource( 19 )
+stream = ExtResource( 13 )
 
 [node name="RigidBody2D3" type="RigidBody2D" parent="."]
 position = Vector2( -3, 544 )
 input_pickable = true
 mode = 2
-physics_material_override = SubResource( 19 )
+physics_material_override = SubResource( 9 )
 gravity_scale = 5.0
 contacts_reported = 1000
 contact_monitor = true
-script = ExtResource( 9 )
+script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D3"]
 position = Vector2( 84, -13 )
 scale = Vector2( 0.186523, 0.216797 )
-texture = ExtResource( 5 )
+texture = ExtResource( 16 )
 hframes = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
 position = Vector2( 84, -6.92188 )
-shape = SubResource( 20 )
+shape = SubResource( 10 )
 
 [node name="Timer" type="Timer" parent="RigidBody2D3"]
 process_mode = 0
 one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RigidBody2D3"]
-stream = ExtResource( 18 )
+stream = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RigidBody2D3"]
-anims/Hit = SubResource( 21 )
-anims/Idle = SubResource( 22 )
-anims/RESET = SubResource( 23 )
-anims/Run = SubResource( 24 )
-anims/WallJump = SubResource( 25 )
+anims/Hit = SubResource( 11 )
+anims/Idle = SubResource( 12 )
+anims/RESET = SubResource( 13 )
+anims/Run = SubResource( 14 )
+anims/WallJump = SubResource( 15 )
+
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2( 566, 3 )
+
+[node name="Sprite5" type="Sprite" parent="Platform1"]
+position = Vector2( -164.5, 429 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 15 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="Platform1"]
+position = Vector2( -260.5, 428 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 15 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite4" type="Sprite" parent="Platform1"]
+position = Vector2( -214, 429 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 15 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite6" type="Sprite" parent="Platform1"]
+position = Vector2( -128, 429 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 15 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite7" type="Sprite" parent="Platform1"]
+position = Vector2( -78.4999, 429 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 15 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform1"]
+position = Vector2( -164.25, 422 )
+shape = SubResource( 16 )
 
 [connection signal="timeout" from="RigidBody2D3/Timer" to="RigidBody2D3" method="_on_Timer_timeout"]

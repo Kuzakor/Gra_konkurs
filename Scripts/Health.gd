@@ -6,6 +6,8 @@ extends RigidBody2D
 # var b = "text"
 
 onready var global = get_node("/root/Global")
+func _ready():
+	$AudioStreamPlayer.volume_db = global.sound
 # Called when the node enters the scene tree for the first time.
 	 # Replace with function body.
 func _process(delta):
