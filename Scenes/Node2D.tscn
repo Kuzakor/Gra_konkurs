@@ -400,6 +400,9 @@ anims/WallJump = SubResource( 16 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RigidBody2D"]
 stream = ExtResource( 16 )
 
+[node name="Hurt" type="AudioStreamPlayer" parent="RigidBody2D"]
+stream = ExtResource( 17 )
+
 [node name="Obstacles" type="Node2D" parent="."]
 
 [node name="Platform1" type="StaticBody2D" parent="Obstacles"]

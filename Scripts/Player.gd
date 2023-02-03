@@ -8,16 +8,20 @@ var vel = Vector2.ZERO
 
 
 onready var global = get_node("/root/Global")
+onready var music = get_node("/root/Music")
 onready var hp_befeore = global.health
 onready var hp_after = global.health
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AudioStreamPlayer.volume_db = global.sound # Replace with function body.
+	$AudioStreamPlayer.volume_db = global.sound
+	$Hurt.volume_db = global.sound
+	 # Replace with function body.
 
 func _physics_process(delta):
 	hp_after = global.health
 	if hp_befeore != hp_after and $AnimationPlayer.current_animation != "Hit":
 		$AnimationPlayer.play("Hit")
+		$Hurt.play()
 		hp_befeore = global.health
 	var a = Vector2.ZERO
 	# (0, 0) 
