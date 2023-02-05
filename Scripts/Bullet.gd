@@ -11,8 +11,10 @@ func _ready():
 	pass
 	
 func _physics_process(delta):
-	print("aa") # Replace with function body.
-
+	move_and_collide(Vector2(-1,0))
+	if is_on_wall():
+		print("as")
+	 # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
