@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Area2D
 
 
 # Declare member variables here. Examples:
@@ -8,14 +8,15 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	
-func _physics_process(delta):
-	add_central_force(Vector2(-5,0))
-	if len(get_colliding_bodies()) > 1:
-		queue_free()
-	 # Replace with function body.
+	pass # Replace with function body.
 
+onready var global = get_node("/root/Global")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Watermelon_body_entered(body):
+	global.health = 300
+	global.bounce = true
+	queue_free()# Replace with function body.

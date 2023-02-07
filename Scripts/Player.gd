@@ -18,6 +18,8 @@ func _ready():
 	 # Replace with function body.
 
 func _physics_process(delta):
+	if global.bounce:
+		set_bounce(0.9)
 	hp_after = global.health
 	if hp_befeore != hp_after and $AnimationPlayer.current_animation != "Hit":
 		$AnimationPlayer.play("Hit")
@@ -25,7 +27,10 @@ func _physics_process(delta):
 		hp_befeore = global.health
 	var a = Vector2.ZERO
 	# (0, 0) 
-	a.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	if global.reverse:
+		a.x = Input.get_action_strength("ui_left") - Input.get_action_strength("ui_right")
+	else:
+		a.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	if Input.is_action_just_pressed("ui_up") and len(get_colliding_bodies()) > 0:
 		a.y = -1
 		$AudioStreamPlayer.play()
@@ -40,5 +45,8 @@ func _physics_process(delta):
 			$AnimationPlayer.play("Idle")
 		if len(get_colliding_bodies()) > 0:
 			self.physics_material_override.friction = 1000 
+			
 	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 800 , vel.y *delta*18000))
 	# Replace with function body.
+
+# Replace with function body.

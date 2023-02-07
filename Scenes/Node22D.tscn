@@ -900,4 +900,11 @@ anims/RESET = SubResource( 23 )
 anims/Run = SubResource( 24 )
 anims/WallJump = SubResource( 25 )
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 110.0
+margin_top = 76.0
+margin_right = 407.0
+margin_bottom = 150.0
+text = " W lewym gornym rogu widzisz pasek zycia - jezeli stracisz cale zycie - giniesz i zaczynasz od poczatku. Na tym poziomie znajduje sie ogien - zadaje duze obrazenia wiec go unikaj"
+
 [connection signal="timeout" from="RigidBody2D3/Timer" to="RigidBody2D3" method="_on_Timer_timeout"]

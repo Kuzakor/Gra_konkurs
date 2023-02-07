@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Free/Items/Checkpoints/End/End (Pressed) (64x64).png" type="Texture" id=1]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=2]
@@ -8,18 +8,14 @@
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" type="Texture" id=6]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Wall Jump (32x32).png" type="Texture" id=7]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" type="Texture" id=8]
-[ext_resource path="res://Scripts/Health.gd" type="Script" id=9]
-[ext_resource path="res://Health bar/greenbar (6).png" type="Texture" id=10]
-[ext_resource path="res://Health bar/greenbar (3).png" type="Texture" id=11]
-[ext_resource path="res://Health bar/greenbar (1).png" type="Texture" id=12]
-[ext_resource path="res://Health bar/greenbar (4).png" type="Texture" id=13]
-[ext_resource path="res://Health bar/greenbar (5).png" type="Texture" id=14]
-[ext_resource path="res://Health bar/greenbar (2).png" type="Texture" id=15]
+[ext_resource path="res://Free/Items/Fruits/Pineapple.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Pineapple.gd" type="Script" id=10]
+[ext_resource path="res://Free/Items/Fruits/Melon.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Watermelon.gd" type="Script" id=12]
+[ext_resource path="res://Free/Items/Fruits/Bananas.png" type="Texture" id=13]
 [ext_resource path="res://Free/Music/cartoon-jump-6462.mp3" type="AudioStream" id=16]
 [ext_resource path="res://Free/Music/jump-climb-or-damage-sound-f-95942.mp3" type="AudioStream" id=17]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" type="Texture" id=18]
-[ext_resource path="res://Scripts/Shooter.gd" type="Script" id=19]
-[ext_resource path="res://Free/Enemies/Plant/Attack (44x42).png" type="Texture" id=20]
 
 [sub_resource type="PhysicsMaterial" id=7]
 friction = 0.5
@@ -310,21 +306,8 @@ tracks/2/keys = {
 "values": [ 1, 2, 3, 4, 4, 4 ]
 }
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 124.438, 23 )
-
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 581, 23 )
-
-[sub_resource type="SpriteFrames" id=17]
-animations = [ {
-"frames": [ ExtResource( 12 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=18]
 
 [sub_resource type="CapsuleShape2D" id=19]
 radius = 23.0
@@ -362,93 +345,101 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=23]
-
-[sub_resource type="Animation" id=24]
-resource_name = "Attack"
-length = 0.53
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Attack(44X42):frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 4, 5, 6 ]
-}
-
-[sub_resource type="Animation" id=25]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Attack(44X42):frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-
-[sub_resource type="Animation" id=26]
-resource_name = "Attack"
-length = 0.53
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Attack(44X42):frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 4, 5, 6 ]
-}
+[sub_resource type="CapsuleShape2D" id=26]
+height = 10.0
 
 [sub_resource type="Animation" id=27]
-length = 0.001
+resource_name = "Idle"
+length = 1.2
+loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Attack(44X42):frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15 ]
 }
 
 [sub_resource type="Animation" id=28]
-resource_name = "Attack"
-length = 0.53
-loop = true
+length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Attack(44X42):frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 4, 5, 6 ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=23]
+resource_name = "Idle"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 3, 4, 5, 6, 7, 8, 9, 15 ]
+}
+
+[sub_resource type="Animation" id=24]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Attack(44X42):frame")
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=25]
+radius = 7.0
+height = 8.0
+
+[sub_resource type="CircleShape2D" id=29]
+radius = 10.198
+
+[sub_resource type="Animation" id=30]
+resource_name = "Idle"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bananas:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15 ]
+}
+
+[sub_resource type="Animation" id=31]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bananas:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -467,7 +458,7 @@ __meta__ = {
 }
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( 112, 540 )
+position = Vector2( 117, 543 )
 input_pickable = true
 mode = 2
 physics_material_override = SubResource( 7 )
@@ -483,7 +474,7 @@ texture = ExtResource( 6 )
 hframes = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2( 83, -6 )
+position = Vector2( 81, -5 )
 shape = SubResource( 8 )
 
 [node name="Timer" type="Timer" parent="RigidBody2D"]
@@ -503,194 +494,6 @@ stream = ExtResource( 16 )
 stream = ExtResource( 17 )
 
 [node name="Obstacles" type="Node2D" parent="."]
-
-[node name="Platform1" type="StaticBody2D" parent="Obstacles"]
-position = Vector2( 566, 3 )
-
-[node name="Sprite5" type="Sprite" parent="Obstacles/Platform1"]
-position = Vector2( -382.5, 399 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite3" type="Sprite" parent="Obstacles/Platform1"]
-position = Vector2( -478.5, 398 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite4" type="Sprite" parent="Obstacles/Platform1"]
-position = Vector2( -432, 399 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite6" type="Sprite" parent="Obstacles/Platform1"]
-position = Vector2( -346, 399 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite7" type="Sprite" parent="Obstacles/Platform1"]
-position = Vector2( -296.5, 399 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/Platform1"]
-position = Vector2( -382.25, 392 )
-shape = SubResource( 4 )
-
-[node name="Platform2" type="StaticBody2D" parent="Obstacles"]
-position = Vector2( 566, 3 )
-
-[node name="Sprite5" type="Sprite" parent="Obstacles/Platform2"]
-position = Vector2( -75.4999, 287 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite3" type="Sprite" parent="Obstacles/Platform2"]
-position = Vector2( -171.5, 286 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite4" type="Sprite" parent="Obstacles/Platform2"]
-position = Vector2( -125, 287 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite6" type="Sprite" parent="Obstacles/Platform2"]
-position = Vector2( -39, 287 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite7" type="Sprite" parent="Obstacles/Platform2"]
-position = Vector2( 10.5, 287 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/Platform2"]
-position = Vector2( -75.25, 280 )
-shape = SubResource( 4 )
-
-[node name="Platform3" type="StaticBody2D" parent="Obstacles"]
-position = Vector2( 566, 3 )
-
-[node name="Sprite5" type="Sprite" parent="Obstacles/Platform3"]
-position = Vector2( 229.5, 193 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite3" type="Sprite" parent="Obstacles/Platform3"]
-position = Vector2( 133.5, 192 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite4" type="Sprite" parent="Obstacles/Platform3"]
-position = Vector2( 180, 193 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite6" type="Sprite" parent="Obstacles/Platform3"]
-position = Vector2( 266, 193 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite7" type="Sprite" parent="Obstacles/Platform3"]
-position = Vector2( 315.5, 193 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/Platform3"]
-position = Vector2( 229.75, 186 )
-shape = SubResource( 4 )
-
-[node name="platform2" type="StaticBody2D" parent="Obstacles"]
-position = Vector2( 662, 4 )
-
-[node name="Sprite3" type="Sprite" parent="Obstacles/platform2"]
-position = Vector2( -267.5, 488 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite2" type="Sprite" parent="Obstacles/platform2"]
-position = Vector2( -221, 489 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite4" type="Sprite" parent="Obstacles/platform2"]
-position = Vector2( -171.5, 489 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite5" type="Sprite" parent="Obstacles/platform2"]
-position = Vector2( -135, 489 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="Sprite6" type="Sprite" parent="Obstacles/platform2"]
-position = Vector2( -85.4999, 489 )
-scale = Vector2( 1.05682, 1 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 3
-frame = 2
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/platform2"]
-position = Vector2( -174, 483 )
-shape = SubResource( 4 )
 
 [node name="Floor" type="StaticBody2D" parent="Obstacles"]
 position = Vector2( 1025, 4 )
@@ -905,20 +708,8 @@ position = Vector2( -1032, 301 )
 rotation = 1.5708
 shape = SubResource( 12 )
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="."]
-mode = 1
-script = ExtResource( 9 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="RigidBody2D2"]
-position = Vector2( 133, 109 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 17 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
-shape = SubResource( 18 )
-
 [node name="Area2D2" type="RigidBody2D" parent="."]
-position = Vector2( 788, 143 )
+position = Vector2( 969, 534 )
 mode = 2
 contacts_reported = 5
 contact_monitor = true
@@ -942,63 +733,91 @@ playback_speed = 1.25
 anims/END = SubResource( 20 )
 anims/RESET = SubResource( 21 )
 
-[node name="Shooter" type="KinematicBody2D" parent="."]
-script = ExtResource( 19 )
-
-[node name="Attack(44X42)" type="Sprite" parent="Shooter"]
-position = Vector2( 602, 443 )
-texture = ExtResource( 20 )
-hframes = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooter"]
-position = Vector2( 606, 443 )
-shape = SubResource( 23 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Shooter"]
-autoplay = "Attack"
-anims/Attack = SubResource( 24 )
-anims/RESET = SubResource( 25 )
-
-[node name="Shooter2" type="KinematicBody2D" parent="."]
-position = Vector2( -3, -202 )
-script = ExtResource( 19 )
-
-[node name="Attack(44X42)" type="Sprite" parent="Shooter2"]
-position = Vector2( 602, 443 )
-texture = ExtResource( 20 )
-hframes = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooter2"]
-position = Vector2( 606, 443 )
-shape = SubResource( 23 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Shooter2"]
-autoplay = "Attack"
-anims/Attack = SubResource( 26 )
-anims/RESET = SubResource( 27 )
-
-[node name="Shooter3" type="KinematicBody2D" parent="."]
-position = Vector2( 377, 98 )
-script = ExtResource( 19 )
-
-[node name="Attack(44X42)" type="Sprite" parent="Shooter3"]
-position = Vector2( 602, 443 )
-texture = ExtResource( 20 )
-hframes = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooter3"]
-position = Vector2( 606, 443 )
-shape = SubResource( 23 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Shooter3"]
-autoplay = "Attack"
-anims/Attack = SubResource( 28 )
-anims/RESET = SubResource( 29 )
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 69.0
-margin_top = 88.0
-margin_right = 507.0
-margin_bottom = 172.0
+margin_left = 268.0
+margin_top = 252.0
+margin_right = 766.0
+margin_bottom = 336.0
 tab_size = 6
-text = "Poruszaj sie uzywajac strzalek. Mozesz skoczyc drugi raz gdy dotkniesz sciany. Na tym poziomie znajduja sie wrogowie - roslinki. Kazda z nich produkuje  groch ktory blokuje przejscie, dostan sie do pucharu jak najszybciej by nie zablokowaly ci drogi."
+text = "Tu znajduja sie wszystkie pozostale mikstury dostepne w grze. "
+
+[node name="Ananas" type="RichTextLabel" parent="."]
+margin_left = 16.0
+margin_top = 478.0
+margin_right = 514.0
+margin_bottom = 562.0
+tab_size = 6
+text = "Ananas leczy ale odwraca sterowanie"
+
+[node name="Arbuz" type="RichTextLabel" parent="."]
+margin_left = 326.0
+margin_top = 478.0
+margin_right = 824.0
+margin_bottom = 562.0
+tab_size = 6
+text = "Arbuz  leczy ale tworzy trampoline z wszystkiego"
+
+[node name="Arbuz2" type="RichTextLabel" parent="."]
+margin_left = 677.0
+margin_top = 478.0
+margin_right = 1175.0
+margin_bottom = 562.0
+tab_size = 6
+text = "Banan usuwa wszystkie negatywne efekty"
+
+[node name="Watermelon" type="Area2D" parent="."]
+position = Vector2( 117, 543 )
+script = ExtResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="Watermelon"]
+position = Vector2( 357, 2.5 )
+scale = Vector2( 1.375, 1.53125 )
+texture = ExtResource( 11 )
+hframes = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Watermelon"]
+position = Vector2( 356, 2.5 )
+rotation = 1.5708
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Watermelon"]
+autoplay = "Idle"
+anims/Idle = SubResource( 27 )
+anims/RESET = SubResource( 28 )
+
+[node name="Pineapple" type="Area2D" parent="."]
+position = Vector2( 117, 543 )
+script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Pineapple"]
+scale = Vector2( 1.46875, 1.375 )
+texture = ExtResource( 9 )
+hframes = 17
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pineapple"]
+autoplay = "Idle"
+anims/Idle = SubResource( 23 )
+anims/RESET = SubResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pineapple"]
+shape = SubResource( 25 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Bananas" type="Sprite" parent="Area2D"]
+position = Vector2( 796, 546 )
+scale = Vector2( 1.65625, 1.375 )
+texture = ExtResource( 13 )
+hframes = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 796, 543 )
+shape = SubResource( 29 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+autoplay = "Idle"
+anims/Idle = SubResource( 30 )
+anims/RESET = SubResource( 31 )
+
+[connection signal="body_entered" from="Watermelon" to="Watermelon" method="_on_Watermelon_body_entered"]
+[connection signal="body_entered" from="Pineapple" to="Pineapple" method="_on_Pineapple_body_entered"]
