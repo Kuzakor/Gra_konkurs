@@ -745,9 +745,9 @@ position = Vector2( 161, 544 )
 rotation = 1.5708
 shape = SubResource( 11 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="Platform2" type="StaticBody2D" parent="."]
 
-[node name="Sprite5" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite5" type="Sprite" parent="Platform2"]
 position = Vector2( 357.539, 457.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -756,7 +756,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite3" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite3" type="Sprite" parent="Platform2"]
 position = Vector2( 484.539, 307.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -765,7 +765,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite4" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite4" type="Sprite" parent="Platform2"]
 position = Vector2( 451.539, 345.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -774,7 +774,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite6" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite6" type="Sprite" parent="Platform2"]
 position = Vector2( 389.539, 418.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -783,7 +783,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite7" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite7" type="Sprite" parent="Platform2"]
 position = Vector2( 422.539, 381.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -792,12 +792,12 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform2"]
 position = Vector2( 419.145, 375.335 )
 rotation = -0.87441
 shape = SubResource( 12 )
 
-[node name="Sprite8" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite8" type="Sprite" parent="Platform2"]
 position = Vector2( 592.539, 364.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -806,7 +806,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite9" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite9" type="Sprite" parent="Platform2"]
 position = Vector2( 719.539, 214.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -815,7 +815,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite10" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite10" type="Sprite" parent="Platform2"]
 position = Vector2( 686.539, 252.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -824,7 +824,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite11" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite11" type="Sprite" parent="Platform2"]
 position = Vector2( 624.539, 325.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -833,7 +833,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite12" type="Sprite" parent="StaticBody2D2"]
+[node name="Sprite12" type="Sprite" parent="Platform2"]
 position = Vector2( 657.539, 288.275 )
 rotation = -0.87441
 scale = Vector2( 1.05682, 1 )
@@ -842,39 +842,39 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Platform2"]
 position = Vector2( 654.145, 282.335 )
 rotation = -0.87441
 shape = SubResource( 12 )
 
-[node name="Area2D" type="RigidBody2D" parent="."]
+[node name="Finish" type="RigidBody2D" parent="."]
 position = Vector2( 780, 384 )
 mode = 2
 contacts_reported = 5
 contact_monitor = true
 script = ExtResource( 8 )
 
-[node name="Blue" type="Sprite" parent="Area2D"]
+[node name="Blue" type="Sprite" parent="Finish"]
 position = Vector2( 15.4, -27 )
 scale = Vector2( 1.1375, 1.625 )
 texture = ExtResource( 10 )
 hframes = 8
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
 position = Vector2( 15, -4 )
 shape = SubResource( 14 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Finish"]
 pause_mode = 1
 autoplay = "END"
 playback_speed = 1.25
 anims/END = SubResource( 15 )
 anims/RESET = SubResource( 16 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="Platform" type="StaticBody2D" parent="."]
 
-[node name="Sprite5" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite5" type="Sprite" parent="Platform"]
 position = Vector2( 755.5, 437 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 3 )
@@ -882,7 +882,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite3" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite3" type="Sprite" parent="Platform"]
 position = Vector2( 659.5, 436 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 3 )
@@ -890,7 +890,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite4" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite4" type="Sprite" parent="Platform"]
 position = Vector2( 706, 437 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 3 )
@@ -898,7 +898,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite6" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite6" type="Sprite" parent="Platform"]
 position = Vector2( 792, 437 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 3 )
@@ -906,7 +906,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite7" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite7" type="Sprite" parent="Platform"]
 position = Vector2( 841.5, 437 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 3 )
@@ -914,26 +914,26 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform"]
 position = Vector2( 755.75, 430 )
 shape = SubResource( 13 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+[node name="Health" type="RigidBody2D" parent="."]
 mode = 1
 script = ExtResource( 12 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="RigidBody2D2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Health"]
 position = Vector2( 128, 107 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 17 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Health"]
 shape = SubResource( 18 )
 
-[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+[node name="Player" type="RigidBody2D" parent="."]
 position = Vector2( -3, 544 )
 input_pickable = true
 mode = 2
@@ -943,27 +943,27 @@ contacts_reported = 1000
 contact_monitor = true
 script = ExtResource( 9 )
 
-[node name="Hurt" type="AudioStreamPlayer" parent="RigidBody2D3"]
+[node name="Hurt" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 19 )
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D3"]
+[node name="Sprite" type="Sprite" parent="Player"]
 position = Vector2( 84, -13 )
 scale = Vector2( 0.186523, 0.216797 )
 texture = ExtResource( 5 )
 hframes = 12
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 84, -6.92188 )
 shape = SubResource( 20 )
 
-[node name="Timer" type="Timer" parent="RigidBody2D3"]
+[node name="Timer" type="Timer" parent="Player"]
 process_mode = 0
 one_shot = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RigidBody2D3"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 18 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RigidBody2D3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 anims/Hit = SubResource( 21 )
 anims/Idle = SubResource( 22 )
 anims/RESET = SubResource( 23 )
@@ -978,4 +978,4 @@ margin_right = 407.0
 margin_bottom = 150.0
 text = " W lewym gornym rogu widzisz pasek zycia - jezeli stracisz cale zycie - giniesz i zaczynasz od poczatku. Na tym poziomie znajduje sie ogien - zadaje duze obrazenia wiec go unikaj"
 
-[connection signal="timeout" from="RigidBody2D3/Timer" to="RigidBody2D3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Player/Timer" to="Player" method="_on_Timer_timeout"]

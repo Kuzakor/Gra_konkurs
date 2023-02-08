@@ -797,34 +797,34 @@ position = Vector2( 145, 241 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
-[node name="Area2D" type="RigidBody2D" parent="."]
+[node name="Finish" type="RigidBody2D" parent="."]
 position = Vector2( 780, 384 )
 mode = 2
 contacts_reported = 5
 contact_monitor = true
 script = ExtResource( 4 )
 
-[node name="Blue" type="Sprite" parent="Area2D"]
+[node name="Blue" type="Sprite" parent="Finish"]
 position = Vector2( 15.4, -27 )
 scale = Vector2( 1.1375, 1.625 )
 texture = ExtResource( 20 )
 hframes = 8
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
 position = Vector2( 15, -4 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Finish"]
 pause_mode = 1
 autoplay = "END"
 playback_speed = 1.25
 anims/END = SubResource( 4 )
 anims/RESET = SubResource( 5 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="Platform" type="StaticBody2D" parent="."]
 
-[node name="Sprite5" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite5" type="Sprite" parent="Platform"]
 position = Vector2( 755.5, 437 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 15 )
@@ -832,7 +832,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite3" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite3" type="Sprite" parent="Platform"]
 position = Vector2( 659.5, 436 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 15 )
@@ -840,7 +840,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite4" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite4" type="Sprite" parent="Platform"]
 position = Vector2( 706, 437 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 15 )
@@ -848,7 +848,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite6" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite6" type="Sprite" parent="Platform"]
 position = Vector2( 792, 437 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 15 )
@@ -856,7 +856,7 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="Sprite7" type="Sprite" parent="StaticBody2D3"]
+[node name="Sprite7" type="Sprite" parent="Platform"]
 position = Vector2( 841.5, 437 )
 scale = Vector2( 1.05682, 1 )
 texture = ExtResource( 15 )
@@ -864,26 +864,26 @@ hframes = 4
 vframes = 3
 frame = 2
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform"]
 position = Vector2( 755.75, 430 )
 shape = SubResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+[node name="health" type="RigidBody2D" parent="."]
 mode = 1
 script = ExtResource( 3 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="RigidBody2D2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="health"]
 position = Vector2( 128, 114 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 7 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="health"]
 shape = SubResource( 8 )
 
-[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+[node name="Player" type="RigidBody2D" parent="."]
 position = Vector2( -3, 544 )
 input_pickable = true
 mode = 2
@@ -893,27 +893,27 @@ contacts_reported = 1000
 contact_monitor = true
 script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D3"]
+[node name="Sprite" type="Sprite" parent="Player"]
 position = Vector2( 84, -13 )
 scale = Vector2( 0.186523, 0.216797 )
 texture = ExtResource( 16 )
 hframes = 12
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 84, -6.92188 )
 shape = SubResource( 10 )
 
-[node name="Timer" type="Timer" parent="RigidBody2D3"]
+[node name="Timer" type="Timer" parent="Player"]
 process_mode = 0
 one_shot = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RigidBody2D3"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 12 )
 
-[node name="Hurt" type="AudioStreamPlayer" parent="RigidBody2D3"]
+[node name="Hurt" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 13 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RigidBody2D3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 anims/Hit = SubResource( 26 )
 anims/Idle = SubResource( 27 )
 anims/RESET = SubResource( 28 )
@@ -968,9 +968,9 @@ frame = 2
 position = Vector2( -164.25, 422 )
 shape = SubResource( 16 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="wall" type="StaticBody2D" parent="."]
 
-[node name="Terrain(16X16)" type="Sprite" parent="StaticBody2D"]
+[node name="Terrain(16X16)" type="Sprite" parent="wall"]
 position = Vector2( 139, 466 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -978,7 +978,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)2" type="Sprite" parent="StaticBody2D"]
+[node name="Terrain(16X16)2" type="Sprite" parent="wall"]
 position = Vector2( 139, 435 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -986,7 +986,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)3" type="Sprite" parent="StaticBody2D"]
+[node name="Terrain(16X16)3" type="Sprite" parent="wall"]
 position = Vector2( 139, 405 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -994,7 +994,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)4" type="Sprite" parent="StaticBody2D"]
+[node name="Terrain(16X16)4" type="Sprite" parent="wall"]
 position = Vector2( 139, 373 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1002,7 +1002,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)5" type="Sprite" parent="StaticBody2D"]
+[node name="Terrain(16X16)5" type="Sprite" parent="wall"]
 position = Vector2( 139, 342 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1010,7 +1010,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)6" type="Sprite" parent="StaticBody2D"]
+[node name="Terrain(16X16)6" type="Sprite" parent="wall"]
 position = Vector2( 139, 311 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1018,7 +1018,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)7" type="Sprite" parent="StaticBody2D"]
+[node name="Terrain(16X16)7" type="Sprite" parent="wall"]
 position = Vector2( 139, 280 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1026,14 +1026,14 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
 position = Vector2( 148, 378 )
 shape = SubResource( 17 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="wall2" type="StaticBody2D" parent="."]
 position = Vector2( -109, 9 )
 
-[node name="Terrain(16X16)" type="Sprite" parent="StaticBody2D2"]
+[node name="Terrain(16X16)" type="Sprite" parent="wall2"]
 position = Vector2( 136.16, 460 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1041,7 +1041,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)2" type="Sprite" parent="StaticBody2D2"]
+[node name="Terrain(16X16)2" type="Sprite" parent="wall2"]
 position = Vector2( 136.16, 429 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1049,7 +1049,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)3" type="Sprite" parent="StaticBody2D2"]
+[node name="Terrain(16X16)3" type="Sprite" parent="wall2"]
 position = Vector2( 136.16, 399 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1057,7 +1057,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)4" type="Sprite" parent="StaticBody2D2"]
+[node name="Terrain(16X16)4" type="Sprite" parent="wall2"]
 position = Vector2( 136.16, 367 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1065,7 +1065,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)5" type="Sprite" parent="StaticBody2D2"]
+[node name="Terrain(16X16)5" type="Sprite" parent="wall2"]
 position = Vector2( 136.16, 336 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1073,7 +1073,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)6" type="Sprite" parent="StaticBody2D2"]
+[node name="Terrain(16X16)6" type="Sprite" parent="wall2"]
 position = Vector2( 136.16, 305 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1081,7 +1081,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="Terrain(16X16)7" type="Sprite" parent="StaticBody2D2"]
+[node name="Terrain(16X16)7" type="Sprite" parent="wall2"]
 position = Vector2( 136.16, 274 )
 scale = Vector2( 1.04, 1 )
 texture = ExtResource( 15 )
@@ -1089,7 +1089,7 @@ hframes = 6
 vframes = 3
 frame = 15
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
 position = Vector2( 145.16, 372 )
 shape = SubResource( 17 )
 
@@ -1126,6 +1126,6 @@ autoplay = "Idle"
 anims/Idle = SubResource( 23 )
 anims/RESET = SubResource( 24 )
 
-[connection signal="timeout" from="RigidBody2D3/Timer" to="RigidBody2D3" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Watermelon" to="RigidBody2D3" method="_on_Watermelon_body_entered"]
+[connection signal="timeout" from="Player/Timer" to="Player" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Watermelon" to="Player" method="_on_Watermelon_body_entered"]
 [connection signal="body_entered" from="Watermelon" to="Watermelon" method="_on_Watermelon_body_entered"]
