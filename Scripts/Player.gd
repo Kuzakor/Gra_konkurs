@@ -42,10 +42,12 @@ func _physics_process(delta):
 	else:
 		vel = Vector2.ZERO
 		if $AnimationPlayer.current_animation != "Hit":
-			$AnimationPlayer.play("Idle")
+			if global.shield:
+				$AnimationPlayer.play("Shield")
+			else:
+				$AnimationPlayer.play("Idle")
 		if len(get_colliding_bodies()) > 0:
 			self.physics_material_override.friction = 1000 
-			
 	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 800 , vel.y *delta*18000))
 	# Replace with function body.
 

@@ -8,6 +8,7 @@ var health = 300
 var sound = 1
 var bounce = false
 var reverse = false	 
+var shield = false
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

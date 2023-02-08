@@ -10,12 +10,12 @@ extends Area2D
 func _ready():
 	pass # Replace with function body.
 
-onready var global = get_node("/root/Global")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+onready var global = get_node("/root/Global")
 
-
-func _on_Pineapple_body_entered(body):
-	global.reverse = true
+func _on_Kiwi2_body_entered(body):
+	global.shield = true
 	queue_free() # Replace with function body.

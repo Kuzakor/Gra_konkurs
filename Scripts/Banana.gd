@@ -16,6 +16,9 @@ onready var global = get_node("/root/Global")
 #	pass
 
 
-func _on_Pineapple_body_entered(body):
-	global.reverse = true
-	queue_free() # Replace with function body.
+func _on_Banana_body_entered(body):
+	global.bounce = false
+	global.reverse = false
+	queue_free()
+	
+
