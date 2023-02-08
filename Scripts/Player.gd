@@ -20,6 +20,8 @@ func _ready():
 func _physics_process(delta):
 	if global.bounce:
 		set_bounce(0.9)
+	else:
+		set_bounce(0)
 	hp_after = global.health
 	if hp_befeore != hp_after and $AnimationPlayer.current_animation != "Hit":
 		$AnimationPlayer.play("Hit")

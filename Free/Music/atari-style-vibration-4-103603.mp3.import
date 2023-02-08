@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/atari-style-vibration-4-103603.mp3-164da8e7bce32742ec94275653a2f213.mp3str"
+
+[deps]
+
+source_file="res://Free/Music/atari-style-vibration-4-103603.mp3"
+dest_files=[ "res://.import/atari-style-vibration-4-103603.mp3-164da8e7bce32742ec94275653a2f213.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

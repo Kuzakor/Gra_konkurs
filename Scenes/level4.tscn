@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Free/Items/Checkpoints/End/End (Pressed) (64x64).png" type="Texture" id=1]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://Free/Music/jump-climb-or-damage-sound-f-95942.mp3" type="AudioStream" id=17]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" type="Texture" id=18]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Idle_shield (32x32).png" type="Texture" id=19]
+[ext_resource path="res://Scripts/Finish4.gd" type="Script" id=20]
+[ext_resource path="res://Free/Music/atari-style-vibration-4-103603.mp3" type="AudioStream" id=21]
 
 [sub_resource type="PhysicsMaterial" id=7]
 friction = 0.5
@@ -817,6 +819,7 @@ position = Vector2( 969, 534 )
 mode = 2
 contacts_reported = 5
 contact_monitor = true
+script = ExtResource( 20 )
 
 [node name="Blue" type="Sprite" parent="Area2D2"]
 position = Vector2( 15.4, -27 )
@@ -837,40 +840,40 @@ anims/END = SubResource( 20 )
 anims/RESET = SubResource( 21 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 331.0
+margin_left = 268.0
 margin_top = 319.0
-margin_right = 829.0
+margin_right = 766.0
 margin_bottom = 403.0
 tab_size = 6
 text = "Tu znajduja sie wszystkie pozostale owoce dostepne w grze. "
 
 [node name="Ananas" type="RichTextLabel" parent="."]
-margin_left = 67.0
-margin_top = 379.0
-margin_right = 565.0
-margin_bottom = 463.0
+margin_left = 22.0
+margin_top = 455.0
+margin_right = 266.0
+margin_bottom = 539.0
 tab_size = 6
 text = "Ananas leczy ale odwraca sterowanie"
 
 [node name="Arbuz" type="RichTextLabel" parent="."]
-margin_left = 505.0
-margin_top = 475.0
-margin_right = 1003.0
-margin_bottom = 559.0
+margin_left = 501.0
+margin_top = 455.0
+margin_right = 999.0
+margin_bottom = 539.0
 tab_size = 6
 text = "Arbuz  leczy ale sie odbijasz"
 
 [node name="Kiwi" type="RichTextLabel" parent="."]
-margin_left = 242.0
-margin_top = 408.0
-margin_right = 562.0
-margin_bottom = 453.0
+margin_left = 222.0
+margin_top = 471.0
+margin_right = 542.0
+margin_bottom = 516.0
 text = "Kiwi daje jednorazowa odpornosc na obrazenia"
 
 [node name="Banan" type="RichTextLabel" parent="."]
-margin_left = 702.0
+margin_left = 674.0
 margin_top = 471.0
-margin_right = 1200.0
+margin_right = 1172.0
 margin_bottom = 555.0
 tab_size = 6
 text = "Banan usuwa wszystkie negatywne efekty"
@@ -880,13 +883,13 @@ position = Vector2( 237, 549 )
 script = ExtResource( 12 )
 
 [node name="Sprite" type="Sprite" parent="Watermelon"]
-position = Vector2( 357, 2.5 )
+position = Vector2( 355, -5 )
 scale = Vector2( 1.375, 1.53125 )
 texture = ExtResource( 11 )
 hframes = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Watermelon"]
-position = Vector2( 356, 2.5 )
+position = Vector2( 356, -5 )
 rotation = 1.5708
 shape = SubResource( 26 )
 
@@ -948,6 +951,9 @@ anims/RESET = SubResource( 33 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kiwi2"]
 position = Vector2( 326, 402 )
 shape = SubResource( 34 )
+
+[node name="Shield" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
 
 [connection signal="body_entered" from="Watermelon" to="Watermelon" method="_on_Watermelon_body_entered"]
 [connection signal="body_entered" from="Pineapple" to="Pineapple" method="_on_Pineapple_body_entered"]
