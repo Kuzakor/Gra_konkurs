@@ -1,9 +1,35 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Free/Music/atari-style-vibration-4-103603.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Free/Terrain/Terrain (16x16).png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Flame.gd" type="Script" id=3]
 [ext_resource path="res://Free/Traps/Fire/On (16x32).png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Finish4.gd" type="Script" id=5]
+[ext_resource path="res://Free/Items/Checkpoints/End/End (Pressed) (64x64).png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Kiwi2.gd" type="Script" id=7]
+[ext_resource path="res://Free/Items/Fruits/Kiwi.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Pineapple.gd" type="Script" id=9]
+[ext_resource path="res://Free/Items/Fruits/Pineapple.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Banana.gd" type="Script" id=11]
+[ext_resource path="res://Free/Items/Fruits/Bananas.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/Health.gd" type="Script" id=13]
+[ext_resource path="res://Health bar/greenbar (4).png" type="Texture" id=14]
+[ext_resource path="res://Health bar/greenbar (3).png" type="Texture" id=15]
+[ext_resource path="res://Health bar/greenbar (6).png" type="Texture" id=16]
+[ext_resource path="res://Health bar/greenbar (2).png" type="Texture" id=17]
+[ext_resource path="res://Health bar/greenbar (5).png" type="Texture" id=18]
+[ext_resource path="res://Health bar/greenbar (1).png" type="Texture" id=19]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=20]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Wall Jump (32x32).png" type="Texture" id=21]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=22]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" type="Texture" id=23]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" type="Texture" id=24]
+[ext_resource path="res://Free/Music/cartoon-jump-6462.mp3" type="AudioStream" id=25]
+[ext_resource path="res://Free/Music/jump-climb-or-damage-sound-f-95942.mp3" type="AudioStream" id=26]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Idle_shield (32x32).png" type="Texture" id=27]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" type="Texture" id=28]
+[ext_resource path="res://Scripts/Shooter.gd" type="Script" id=29]
+[ext_resource path="res://Free/Enemies/Plant/Attack (44x42).png" type="Texture" id=30]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 581, 23 )
@@ -17,6 +43,578 @@ extents = Vector2( 22, 117 )
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 15.0
 height = 9.42221
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 23.0
+height = 10.0
+
+[sub_resource type="Animation" id=6]
+resource_name = "END"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Blue:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Blue:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Idle"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kiwi:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kiwi:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 16.0312
+
+[sub_resource type="CircleShape2D" id=14]
+radius = 10.198
+
+[sub_resource type="Animation" id=15]
+resource_name = "Idle"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bananas:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15 ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bananas:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "Idle"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 3, 4, 5, 6, 7, 8, 9, 15 ]
+}
+
+[sub_resource type="Animation" id=18]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=19]
+radius = 7.0
+height = 8.0
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=21]
+
+[sub_resource type="PhysicsMaterial" id=22]
+friction = 0.5
+rough = true
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 16, 20.0781 )
+
+[sub_resource type="Animation" id=24]
+resource_name = "Hit"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 28 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.343506, 0.401856 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "Idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.186523, 0.216797 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 84, -13 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 23 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 12 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.186523, 0.216797 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 84, -13 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "Run"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 85, -8 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.382812, 0.421387 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "Shield"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 83, -8 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.196517, 0.198669 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "WallJump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 4, 4 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=30]
+
+[sub_resource type="Animation" id=31]
+resource_name = "Attack"
+length = 0.53
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Attack(44X42):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=32]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Attack(44X42):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "Attack"
+length = 0.53
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Attack(44X42):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=34]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Attack(44X42):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -459,7 +1057,7 @@ vframes = 3
 frame = 2
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Platform2"]
-position = Vector2( 23.7501, 228 )
+position = Vector2( 21, 228 )
 shape = SubResource( 2 )
 
 [node name="Sprite18" type="Sprite" parent="Platform2"]
@@ -640,11 +1238,11 @@ contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="On(16X32)2" type="Sprite" parent="Flame4"]
-position = Vector2( 302, 544 )
+position = Vector2( 300, 540 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flame4"]
-position = Vector2( 301, 544 )
+position = Vector2( 299, 540 )
 rotation = 1.5708
 shape = SubResource( 4 )
 
@@ -656,11 +1254,11 @@ contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="On(16X32)2" type="Sprite" parent="Flame5"]
-position = Vector2( 302, 544 )
+position = Vector2( 299, 539 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flame5"]
-position = Vector2( 301, 544 )
+position = Vector2( 298, 539 )
 rotation = 1.5708
 shape = SubResource( 4 )
 
@@ -672,11 +1270,11 @@ contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="On(16X32)2" type="Sprite" parent="Flame6"]
-position = Vector2( 302, 544 )
+position = Vector2( 302, 540 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flame6"]
-position = Vector2( 301, 544 )
+position = Vector2( 301, 540 )
 rotation = 1.5708
 shape = SubResource( 4 )
 
@@ -688,11 +1286,11 @@ contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="On(16X32)2" type="Sprite" parent="Flame7"]
-position = Vector2( 302, 544 )
+position = Vector2( 302, 540 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flame7"]
-position = Vector2( 301, 544 )
+position = Vector2( 301, 540 )
 rotation = 1.5708
 shape = SubResource( 4 )
 
@@ -704,11 +1302,11 @@ contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="On(16X32)2" type="Sprite" parent="Flame8"]
-position = Vector2( 302, 544 )
+position = Vector2( 302, 540 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flame8"]
-position = Vector2( 301, 544 )
+position = Vector2( 301, 540 )
 rotation = 1.5708
 shape = SubResource( 4 )
 
@@ -720,11 +1318,11 @@ contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="On(16X32)2" type="Sprite" parent="Flame9"]
-position = Vector2( 302, 544 )
+position = Vector2( 303, 540 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flame9"]
-position = Vector2( 301, 544 )
+position = Vector2( 302, 540 )
 rotation = 1.5708
 shape = SubResource( 4 )
 
@@ -736,10 +1334,202 @@ contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="On(16X32)2" type="Sprite" parent="Flame10"]
-position = Vector2( 302, 544 )
+position = Vector2( 300, 540 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flame10"]
-position = Vector2( 301, 544 )
+position = Vector2( 299, 540 )
 rotation = 1.5708
 shape = SubResource( 4 )
+
+[node name="Area2D2" type="RigidBody2D" parent="."]
+position = Vector2( 952, 184 )
+mode = 2
+contacts_reported = 5
+contact_monitor = true
+script = ExtResource( 5 )
+
+[node name="Blue" type="Sprite" parent="Area2D2"]
+position = Vector2( 15.4, -27 )
+scale = Vector2( 1.1375, 1.625 )
+texture = ExtResource( 6 )
+hframes = 8
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 17, -6 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D2"]
+pause_mode = 1
+autoplay = "END"
+playback_speed = 1.25
+anims/END = SubResource( 6 )
+anims/RESET = SubResource( 7 )
+
+[node name="Kiwi2" type="Area2D" parent="."]
+position = Vector2( -56, 138 )
+script = ExtResource( 7 )
+
+[node name="Kiwi" type="Sprite" parent="Kiwi2"]
+position = Vector2( 326.5, 402.5 )
+scale = Vector2( 1.96875, 1.71875 )
+texture = ExtResource( 8 )
+hframes = 17
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Kiwi2"]
+autoplay = "Idle"
+anims/Idle = SubResource( 8 )
+anims/RESET = SubResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kiwi2"]
+position = Vector2( 326, 402 )
+shape = SubResource( 10 )
+
+[node name="Banana" type="Area2D" parent="."]
+position = Vector2( -142, -352 )
+script = ExtResource( 11 )
+
+[node name="Bananas" type="Sprite" parent="Banana"]
+position = Vector2( 796, 546 )
+scale = Vector2( 1.65625, 1.375 )
+texture = ExtResource( 12 )
+hframes = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Banana"]
+position = Vector2( 796, 543 )
+shape = SubResource( 14 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Banana"]
+autoplay = "Idle"
+anims/Idle = SubResource( 15 )
+anims/RESET = SubResource( 16 )
+
+[node name="Banan" type="RichTextLabel" parent="."]
+margin_left = 469.0
+margin_top = 70.0
+margin_right = 967.0
+margin_bottom = 154.0
+tab_size = 6
+text = "Banan usuwa wszystkie negatywne efekty"
+
+[node name="Kiwi" type="RichTextLabel" parent="."]
+margin_left = 152.0
+margin_top = 478.0
+margin_right = 472.0
+margin_bottom = 523.0
+text = "Kiwi daje jednorazowa odpornosc na obrazenia"
+
+[node name="Pineapple" type="Area2D" parent="."]
+position = Vector2( 454, 359 )
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="Pineapple"]
+scale = Vector2( 1.46875, 1.375 )
+texture = ExtResource( 10 )
+hframes = 17
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pineapple"]
+autoplay = "Idle"
+anims/Idle = SubResource( 17 )
+anims/RESET = SubResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pineapple"]
+shape = SubResource( 19 )
+
+[node name="Ananas" type="RichTextLabel" parent="."]
+margin_left = 333.0
+margin_top = 289.0
+margin_right = 577.0
+margin_bottom = 373.0
+tab_size = 6
+text = "Ananas leczy ale odwraca sterowanie"
+
+[node name="health" type="RigidBody2D" parent="."]
+mode = 1
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="health"]
+position = Vector2( 128, 105 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="health"]
+shape = SubResource( 21 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 12, 540 )
+input_pickable = true
+mode = 2
+physics_material_override = SubResource( 22 )
+gravity_scale = 5.0
+contacts_reported = 1000
+contact_monitor = true
+script = ExtResource( 20 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+position = Vector2( 84, -13 )
+scale = Vector2( 0.186523, 0.216797 )
+texture = ExtResource( 23 )
+hframes = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2( 81, -5 )
+shape = SubResource( 23 )
+
+[node name="Timer" type="Timer" parent="RigidBody2D"]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RigidBody2D"]
+anims/Hit = SubResource( 24 )
+anims/Idle = SubResource( 25 )
+anims/RESET = SubResource( 26 )
+anims/Run = SubResource( 27 )
+anims/Shield = SubResource( 28 )
+anims/WallJump = SubResource( 29 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RigidBody2D"]
+stream = ExtResource( 25 )
+
+[node name="Hurt" type="AudioStreamPlayer" parent="RigidBody2D"]
+stream = ExtResource( 26 )
+
+[node name="Shooter" type="KinematicBody2D" parent="."]
+position = Vector2( 380, 98 )
+script = ExtResource( 29 )
+
+[node name="Attack(44X42)" type="Sprite" parent="Shooter"]
+position = Vector2( 602, 443 )
+texture = ExtResource( 30 )
+hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooter"]
+position = Vector2( 606, 443 )
+shape = SubResource( 30 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Shooter"]
+autoplay = "Attack"
+anims/Attack = SubResource( 31 )
+anims/RESET = SubResource( 32 )
+
+[node name="Shooter2" type="KinematicBody2D" parent="."]
+position = Vector2( -407, -91 )
+script = ExtResource( 29 )
+
+[node name="Attack(44X42)" type="Sprite" parent="Shooter2"]
+position = Vector2( 602, 443 )
+texture = ExtResource( 30 )
+hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooter2"]
+position = Vector2( 606, 443 )
+shape = SubResource( 30 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Shooter2"]
+autoplay = "Attack"
+anims/Attack = SubResource( 33 )
+anims/RESET = SubResource( 34 )
+
+[connection signal="body_entered" from="Kiwi2" to="Kiwi2" method="_on_Kiwi2_body_entered"]
+[connection signal="body_entered" from="Banana" to="Banana" method="_on_Banana_body_entered"]
+[connection signal="body_entered" from="Pineapple" to="Pineapple" method="_on_Pineapple_body_entered"]
