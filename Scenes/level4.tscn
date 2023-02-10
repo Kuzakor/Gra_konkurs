@@ -703,7 +703,7 @@ margin_top = 367.0
 margin_right = 726.0
 margin_bottom = 477.0
 tab_size = 6
-text = "Postac ktora grasz to nie zwykla zaba, zaba ta jest polaczona z wszzystkim co zywe (lub prawie zywe), wiec aby wygrac nie musisz koniecznie dojsc do pucharu - mozesz wrzucic tam np groszek z roslinki. Jednak gdy groch otrzyma obrazenia to ty tez.  Sprobuj to wykorzystac."
+text = "Postac ktora grasz to nie zwykla zaba, zaba ta jest polaczona z wszystkim co zywe (lub prawie zywe), wiec aby wygrac nie musisz koniecznie dojsc do pucharu - mozesz wrzucic tam np groszek z roslinki. Jednak gdy groch otrzyma obrazenia to ty tez.  Sprobuj to wykorzystac."
 
 [node name="Shield" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )

@@ -21,6 +21,9 @@ func _process(delta):
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		global.health = 300
+		global.bounce = false
+		global.shield = 0
+		global.reverse = false
 		get_tree().change_scene("res://Scenes/Node2D.tscn")
 		
 		

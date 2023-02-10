@@ -1517,12 +1517,12 @@ position = Vector2( -407, -91 )
 script = ExtResource( 29 )
 
 [node name="Attack(44X42)" type="Sprite" parent="Shooter2"]
-position = Vector2( 602, 443 )
+position = Vector2( 541, 444 )
 texture = ExtResource( 30 )
 hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shooter2"]
-position = Vector2( 606, 443 )
+position = Vector2( 545, 444 )
 shape = SubResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Shooter2"]
