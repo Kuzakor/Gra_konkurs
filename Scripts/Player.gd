@@ -5,6 +5,7 @@ extends RigidBody2D
 # var a = 2
 # var b = "text"
 var vel = Vector2.ZERO
+var jump_high = 0
 
 
 onready var global = get_node("/root/Global")
@@ -50,7 +51,12 @@ func _physics_process(delta):
 				$AnimationPlayer.play("Idle")
 		if len(get_colliding_bodies()) > 0:
 			self.physics_material_override.friction = 1000 
-	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 800 , vel.y *delta*18000))
+			
+	if global.jump_boost:
+		jump_high = 36000
+	else:
+		jump_high = 18000
+	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 800 , vel.y *delta*jump_high))
 	# Replace with function body.
 
 # Replace with function body.
