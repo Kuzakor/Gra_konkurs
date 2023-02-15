@@ -10,6 +10,7 @@ var bounce = false
 var reverse = false	 
 var shield = 0
 var jump_boost = false
+var money = 0
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

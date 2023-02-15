@@ -13,7 +13,7 @@ var which_child = 3
 var active = false
 	
 func _physics_process(delta):
-	print(get_colliding_bodies())
+
 	if len(get_colliding_bodies()) > 1:
 		active = true
 	if active:

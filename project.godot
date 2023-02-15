@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Zadanie_platformer"
-run/main_scene="res://Scenes/level6.tscn"
+run/main_scene="res://Scenes/menu.tscn"
 config/icon="res://icon.png"
 run/size/height=600
 

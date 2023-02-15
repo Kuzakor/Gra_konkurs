@@ -16,9 +16,11 @@ onready var hp_after = global.health
 func _ready():
 	$AudioStreamPlayer.volume_db = global.sound
 	$Hurt.volume_db = global.sound
+	set_gravity_scale(10)
 	 # Replace with function body.
 
 func _physics_process(delta):
+	print(global.money)
 	if global.bounce:
 		set_bounce(0.9)
 	else:
@@ -53,9 +55,9 @@ func _physics_process(delta):
 			self.physics_material_override.friction = 1000 
 			
 	if global.jump_boost:
-		jump_high = 36000
+		jump_high = 65000
 	else:
-		jump_high = 18000
+		jump_high = 25000
 	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 800 , vel.y *delta*jump_high))
 	# Replace with function body.
 
