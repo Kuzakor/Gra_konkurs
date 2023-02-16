@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" type="Texture" id=1]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Wall Jump (32x32).png" type="Texture" id=2]
@@ -26,6 +26,9 @@
 [ext_resource path="res://Free/Music/atari-style-vibration-4-103603.mp3" type="AudioStream" id=24]
 [ext_resource path="res://Scripts/Banana.gd" type="Script" id=25]
 [ext_resource path="res://Free/Items/Fruits/Bananas.png" type="Texture" id=26]
+[ext_resource path="res://Scripts/Money_couner.gd" type="Script" id=27]
+[ext_resource path="res://Free/Coin_Gems/MonedaD.png" type="Texture" id=28]
+[ext_resource path="res://Scripts/Money.gd" type="Script" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 581, 23 )
@@ -502,6 +505,105 @@ tracks/0/keys = {
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bananas:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=35]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=36]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="CircleShape2D" id=37]
+radius = 6.08276
+
+[sub_resource type="Animation" id=38]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=39]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=41]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1128,9 +1230,9 @@ position = Vector2( 145.16, 372 )
 shape = SubResource( 17 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 36.0
+margin_left = 37.0
 margin_top = 113.0
-margin_right = 431.0
+margin_right = 432.0
 margin_bottom = 204.0
 text = "Wskazowka: Uzyj mozliwsci wspinania sie po scianach."
 
@@ -1186,7 +1288,81 @@ autoplay = "Idle"
 anims/Idle = SubResource( 33 )
 anims/RESET = SubResource( 34 )
 
+[node name="Money4" type="Area2D" parent="."]
+script = ExtResource( 27 )
+
+[node name="MonedaD2" type="Sprite" parent="Money4"]
+position = Vector2( 282, 23 )
+scale = Vector2( 1.75, 2.125 )
+texture = ExtResource( 28 )
+hframes = 5
+
+[node name="Money_count" type="RichTextLabel" parent="Money4"]
+margin_left = 251.0
+margin_top = 12.0
+margin_right = 290.0
+margin_bottom = 39.0
+tab_size = 6
+text = "0"
+
+[node name="Money" type="Area2D" parent="."]
+position = Vector2( -362, -197 )
+script = ExtResource( 29 )
+
+[node name="MonedaD" type="Sprite" parent="Money"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 28 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money"]
+autoplay = "Idle"
+anims/Idle = SubResource( 35 )
+anims/RESET = SubResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money"]
+position = Vector2( 403, 446 )
+shape = SubResource( 37 )
+
+[node name="Money2" type="Area2D" parent="."]
+position = Vector2( -5, -58 )
+script = ExtResource( 29 )
+
+[node name="MonedaD" type="Sprite" parent="Money2"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 28 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money2"]
+autoplay = "Idle"
+anims/Idle = SubResource( 38 )
+anims/RESET = SubResource( 39 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money2"]
+position = Vector2( 403, 446 )
+shape = SubResource( 37 )
+
+[node name="Money3" type="Area2D" parent="."]
+position = Vector2( 460, -54 )
+script = ExtResource( 29 )
+
+[node name="MonedaD" type="Sprite" parent="Money3"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 28 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money3"]
+autoplay = "Idle"
+anims/Idle = SubResource( 40 )
+anims/RESET = SubResource( 41 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money3"]
+position = Vector2( 403, 446 )
+shape = SubResource( 37 )
+
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Watermelon" to="Player" method="_on_Watermelon_body_entered"]
 [connection signal="body_entered" from="Watermelon" to="Watermelon" method="_on_Watermelon_body_entered"]
 [connection signal="body_entered" from="Banana" to="Banana" method="_on_Banana_body_entered"]
+[connection signal="body_entered" from="Money" to="Money" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money2" to="Money2" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money3" to="Money3" method="_on_Area2D_body_entered"]

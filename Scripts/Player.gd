@@ -58,6 +58,7 @@ func _physics_process(delta):
 		jump_high = 65000
 	else:
 		jump_high = 25000
+		
 	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 800 , vel.y *delta*jump_high))
 	# Replace with function body.
 
