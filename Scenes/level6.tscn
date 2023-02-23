@@ -3624,10 +3624,10 @@ anims/Idle = SubResource( 23 )
 anims/RESET = SubResource( 24 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 492.0
-margin_top = 129.0
-margin_right = 873.0
-margin_bottom = 231.0
+margin_left = 509.0
+margin_top = 121.0
+margin_right = 890.0
+margin_bottom = 223.0
 text = "Niektóre roslinki mozna popchnac, i dopiero wtedy sie aktywuja. Poznasz je po tym ze sie chwieja"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
