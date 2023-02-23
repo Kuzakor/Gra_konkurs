@@ -4234,6 +4234,177 @@ texture = ExtResource( 5 )
 position = Vector2( -542, 363 )
 shape = SubResource( 6 )
 
+[node name="On(16X32)7" type="Sprite" parent="Flame8"]
+position = Vector2( -511.001, 315.998 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -509.001, 314.998 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)8" type="Sprite" parent="Flame8"]
+position = Vector2( -510.002, 645.998 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -508.002, 644.998 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)9" type="Sprite" parent="Flame8"]
+position = Vector2( -412.002, 590.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -410.002, 589.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)10" type="Sprite" parent="Flame8"]
+position = Vector2( -371.002, 568.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -369.002, 567.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)11" type="Sprite" parent="Flame8"]
+position = Vector2( -411.001, 369.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -409.002, 368.998 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)12" type="Sprite" parent="Flame8"]
+position = Vector2( -372.001, 395.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -370.002, 394.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)13" type="Sprite" parent="Flame8"]
+position = Vector2( -333.002, 422.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -331.002, 421.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)14" type="Sprite" parent="Flame8"]
+position = Vector2( -289.002, 449.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -287.002, 448.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)15" type="Sprite" parent="Flame8"]
+position = Vector2( -248.001, 369.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -246.001, 368.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)16" type="Sprite" parent="Flame8"]
+position = Vector2( -204.001, 350.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -202.001, 349.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)17" type="Sprite" parent="Flame8"]
+position = Vector2( -157.001, 390.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -155.002, 389.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)18" type="Sprite" parent="Flame8"]
+position = Vector2( -305.002, 616.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -303.002, 615.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)19" type="Sprite" parent="Flame8"]
+position = Vector2( -266.002, 674.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -264.003, 673.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)20" type="Sprite" parent="Flame8"]
+position = Vector2( -210.003, 703.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -208.003, 702.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)21" type="Sprite" parent="Flame8"]
+position = Vector2( -533.001, 165.998 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -531.001, 164.998 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)25" type="Sprite" parent="Flame8"]
+position = Vector2( -215.002, 455.999 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -213.002, 454.999 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)22" type="Sprite" parent="Flame8"]
+position = Vector2( -536.003, 769.998 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -534.003, 768.998 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)23" type="Sprite" parent="Flame8"]
+position = Vector2( -99.0005, 120 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -97.0006, 119 )
+shape = SubResource( 6 )
+
+[node name="On(16X32)24" type="Sprite" parent="Flame8"]
+position = Vector2( -99.0005, 120 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Flame8"]
+position = Vector2( -97.0006, 119 )
+shape = SubResource( 6 )
+
 [node name="Flame14" type="RigidBody2D" parent="."]
 position = Vector2( 178, -403 )
 rotation = -1.5708

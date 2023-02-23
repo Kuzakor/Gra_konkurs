@@ -1,4 +1,4 @@
-[gd_scene load_steps=222 format=2]
+[gd_scene load_steps=223 format=2]
 
 [ext_resource path="res://Free/Music/atari-style-vibration-4-103603.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Free/Terrain/Terrain (16x16).png" type="Texture" id=2]
@@ -3090,6 +3090,10 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
+[sub_resource type="CapsuleShape2D" id=191]
+radius = 15.0
+height = 9.42221
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Shield" type="AudioStreamPlayer" parent="."]
@@ -5408,6 +5412,32 @@ anims/RESET = SubResource( 190 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Money111"]
 position = Vector2( 392, 446 )
 shape = SubResource( 48 )
+
+[node name="Flame14" type="RigidBody2D" parent="."]
+position = Vector2( 178, -403 )
+rotation = -1.5708
+mode = 3
+contacts_reported = 10000
+contact_monitor = true
+script = ExtResource( 3 )
+
+[node name="On(16X32)6" type="Sprite" parent="Flame14"]
+position = Vector2( -939.001, 419.997 )
+rotation = 1.5708
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Flame14"]
+position = Vector2( -937.002, 418.997 )
+shape = SubResource( 191 )
+
+[node name="On(16X32)7" type="Sprite" parent="Flame14"]
+position = Vector2( -755.001, 193.997 )
+rotation = 1.5708
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Flame14"]
+position = Vector2( -753.001, 192.997 )
+shape = SubResource( 191 )
 
 [connection signal="body_entered" from="Kiwi2" to="Kiwi2" method="_on_Kiwi2_body_entered"]
 [connection signal="body_entered" from="Banana" to="Banana" method="_on_Banana_body_entered"]
