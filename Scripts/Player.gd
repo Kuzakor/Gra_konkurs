@@ -20,7 +20,6 @@ func _ready():
 	 # Replace with function body.
 
 func _physics_process(delta):
-	print(global.money)
 	if global.bounce:
 		set_bounce(0.9)
 	else:

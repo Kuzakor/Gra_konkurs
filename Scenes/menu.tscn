@@ -43,5 +43,12 @@ shape = SubResource( 2 )
 position = Vector2( 520, 240 )
 texture = ExtResource( 4 )
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 256.0
+margin_top = 262.0
+margin_right = 911.0
+margin_bottom = 302.0
+text = "Ostrzezenie: Gra jest bardzo trudna, wymaga cierpliwosci i wielu ponownych prob"
+
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_Area2D2_input_event"]

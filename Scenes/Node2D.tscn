@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=132 format=2]
 
 [ext_resource path="res://Free/Items/Checkpoints/End/End (Pressed) (64x64).png" type="Texture" id=1]
 [ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Free/Coin_Gems/MonedaD.png" type="Texture" id=22]
 [ext_resource path="res://Scripts/Money.gd" type="Script" id=23]
 [ext_resource path="res://Scripts/Money_couner.gd" type="Script" id=24]
+[ext_resource path="res://Free/Music/coin.wav" type="AudioStream" id=25]
 
 [sub_resource type="PhysicsMaterial" id=7]
 friction = 0.5
@@ -692,6 +693,1161 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
+[sub_resource type="Animation" id=47]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=48]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="CircleShape2D" id=49]
+radius = 6.08276
+
+[sub_resource type="Animation" id=50]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=51]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=52]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=53]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=54]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=55]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=57]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=58]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=59]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=60]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=61]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=62]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=63]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=64]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=65]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=66]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=67]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=68]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=69]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=70]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=71]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=73]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=74]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=75]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=76]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=77]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=78]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=79]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=80]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=81]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=82]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=83]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=84]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=85]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=86]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=87]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=88]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=89]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=90]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=91]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=92]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=93]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=94]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=95]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=96]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=97]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=98]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=99]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=100]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=101]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=102]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=103]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=104]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=105]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=106]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=107]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=108]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=109]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=110]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=111]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=112]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=113]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=114]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=115]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=116]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=117]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=118]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
+
+[sub_resource type="Animation" id=119]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonedaD:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
 [node name="Node2D" type="Node2D"]
 position = Vector2( 0, -1 )
 __meta__ = {
@@ -734,6 +1890,9 @@ anims/RESET = SubResource( 32 )
 anims/Run = SubResource( 33 )
 anims/Shield = SubResource( 34 )
 anims/WallJump = SubResource( 35 )
+
+[node name="Coin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
 
 [node name="Obstacles" type="Node2D" parent="."]
 
@@ -1252,7 +2411,7 @@ margin_top = 88.0
 margin_right = 507.0
 margin_bottom = 172.0
 tab_size = 6
-text = "Poruszaj sie uzywajac strzalek. Mozesz skoczyc drugi raz gdy dotkniesz sciany. Na tym poziomie znajduja sie wrogowie - roslinki. Kazda z nich produkuje  groch ktory blokuje przejscie, dostan sie do pucharu jak najszybciej by nie zablokowaly ci drogi."
+text = "Poruszaj sie uzywajac strzalek. Mozesz skoczyc drugi raz gdy dotkniesz sciany. Na tym poziomie znajduja sie wrogowie - roslinki. Kazda z nich produkuje  groch ktory blokuje przejscie, dostan sie do pucharu jak najszybciej by nie zablokowaly ci drogi. Uzyj r aby zrestartowac gre"
 
 [node name="Shooter5" type="KinematicBody2D" parent="."]
 position = Vector2( 377, 98 )
@@ -1342,6 +2501,690 @@ margin_bottom = 39.0
 tab_size = 6
 text = "0"
 
+[node name="Money40" type="Area2D" parent="."]
+position = Vector2( 71, -7 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money40"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money40"]
+autoplay = "Idle"
+anims/Idle = SubResource( 47 )
+anims/RESET = SubResource( 48 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money40"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money41" type="Area2D" parent="."]
+position = Vector2( 71, -7 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money41"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money41"]
+autoplay = "Idle"
+anims/Idle = SubResource( 50 )
+anims/RESET = SubResource( 51 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money41"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money42" type="Area2D" parent="."]
+position = Vector2( 88, -7 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money42"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money42"]
+autoplay = "Idle"
+anims/Idle = SubResource( 52 )
+anims/RESET = SubResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money42"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money43" type="Area2D" parent="."]
+position = Vector2( 108, -7 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money43"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money43"]
+autoplay = "Idle"
+anims/Idle = SubResource( 54 )
+anims/RESET = SubResource( 55 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money43"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money44" type="Area2D" parent="."]
+position = Vector2( 125, -7 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money44"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money44"]
+autoplay = "Idle"
+anims/Idle = SubResource( 56 )
+anims/RESET = SubResource( 57 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money44"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money45" type="Area2D" parent="."]
+position = Vector2( 152, -7 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money45"]
+position = Vector2( 392, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money45"]
+autoplay = "Idle"
+anims/Idle = SubResource( 58 )
+anims/RESET = SubResource( 59 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money45"]
+position = Vector2( 392, 446 )
+shape = SubResource( 49 )
+
+[node name="Money46" type="Area2D" parent="."]
+position = Vector2( 71, -27 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money46"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money46"]
+autoplay = "Idle"
+anims/Idle = SubResource( 60 )
+anims/RESET = SubResource( 61 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money46"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money47" type="Area2D" parent="."]
+position = Vector2( 71, -27 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money47"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money47"]
+autoplay = "Idle"
+anims/Idle = SubResource( 62 )
+anims/RESET = SubResource( 63 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money47"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money48" type="Area2D" parent="."]
+position = Vector2( 88, -27 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money48"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money48"]
+autoplay = "Idle"
+anims/Idle = SubResource( 64 )
+anims/RESET = SubResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money48"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money49" type="Area2D" parent="."]
+position = Vector2( 108, -27 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money49"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money49"]
+autoplay = "Idle"
+anims/Idle = SubResource( 66 )
+anims/RESET = SubResource( 67 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money49"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money50" type="Area2D" parent="."]
+position = Vector2( 125, -27 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money50"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money50"]
+autoplay = "Idle"
+anims/Idle = SubResource( 68 )
+anims/RESET = SubResource( 69 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money50"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money51" type="Area2D" parent="."]
+position = Vector2( 152, -27 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money51"]
+position = Vector2( 392, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money51"]
+autoplay = "Idle"
+anims/Idle = SubResource( 70 )
+anims/RESET = SubResource( 71 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money51"]
+position = Vector2( 392, 446 )
+shape = SubResource( 49 )
+
+[node name="Money52" type="Area2D" parent="."]
+position = Vector2( 71, -50 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money52"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money52"]
+autoplay = "Idle"
+anims/Idle = SubResource( 72 )
+anims/RESET = SubResource( 73 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money52"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money53" type="Area2D" parent="."]
+position = Vector2( 71, -50 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money53"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money53"]
+autoplay = "Idle"
+anims/Idle = SubResource( 74 )
+anims/RESET = SubResource( 75 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money53"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money54" type="Area2D" parent="."]
+position = Vector2( 88, -50 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money54"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money54"]
+autoplay = "Idle"
+anims/Idle = SubResource( 76 )
+anims/RESET = SubResource( 77 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money54"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money55" type="Area2D" parent="."]
+position = Vector2( 108, -50 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money55"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money55"]
+autoplay = "Idle"
+anims/Idle = SubResource( 78 )
+anims/RESET = SubResource( 79 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money55"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money56" type="Area2D" parent="."]
+position = Vector2( 125, -50 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money56"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money56"]
+autoplay = "Idle"
+anims/Idle = SubResource( 80 )
+anims/RESET = SubResource( 81 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money56"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money57" type="Area2D" parent="."]
+position = Vector2( 152, -50 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money57"]
+position = Vector2( 392, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money57"]
+autoplay = "Idle"
+anims/Idle = SubResource( 82 )
+anims/RESET = SubResource( 83 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money57"]
+position = Vector2( 392, 446 )
+shape = SubResource( 49 )
+
+[node name="Money58" type="Area2D" parent="."]
+position = Vector2( -240, -113 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money58"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money58"]
+autoplay = "Idle"
+anims/Idle = SubResource( 84 )
+anims/RESET = SubResource( 85 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money58"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money59" type="Area2D" parent="."]
+position = Vector2( -240, -113 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money59"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money59"]
+autoplay = "Idle"
+anims/Idle = SubResource( 86 )
+anims/RESET = SubResource( 87 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money59"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money60" type="Area2D" parent="."]
+position = Vector2( -223, -113 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money60"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money60"]
+autoplay = "Idle"
+anims/Idle = SubResource( 88 )
+anims/RESET = SubResource( 89 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money60"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money61" type="Area2D" parent="."]
+position = Vector2( -203, -113 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money61"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money61"]
+autoplay = "Idle"
+anims/Idle = SubResource( 90 )
+anims/RESET = SubResource( 91 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money61"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money62" type="Area2D" parent="."]
+position = Vector2( -186, -113 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money62"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money62"]
+autoplay = "Idle"
+anims/Idle = SubResource( 92 )
+anims/RESET = SubResource( 93 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money62"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money63" type="Area2D" parent="."]
+position = Vector2( -159, -113 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money63"]
+position = Vector2( 392, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money63"]
+autoplay = "Idle"
+anims/Idle = SubResource( 94 )
+anims/RESET = SubResource( 95 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money63"]
+position = Vector2( 392, 446 )
+shape = SubResource( 49 )
+
+[node name="Money64" type="Area2D" parent="."]
+position = Vector2( -240, -133 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money64"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money64"]
+autoplay = "Idle"
+anims/Idle = SubResource( 96 )
+anims/RESET = SubResource( 97 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money64"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money65" type="Area2D" parent="."]
+position = Vector2( -240, -133 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money65"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money65"]
+autoplay = "Idle"
+anims/Idle = SubResource( 98 )
+anims/RESET = SubResource( 99 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money65"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money66" type="Area2D" parent="."]
+position = Vector2( -223, -133 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money66"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money66"]
+autoplay = "Idle"
+anims/Idle = SubResource( 100 )
+anims/RESET = SubResource( 101 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money66"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money67" type="Area2D" parent="."]
+position = Vector2( -203, -133 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money67"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money67"]
+autoplay = "Idle"
+anims/Idle = SubResource( 102 )
+anims/RESET = SubResource( 103 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money67"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money68" type="Area2D" parent="."]
+position = Vector2( -186, -133 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money68"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money68"]
+autoplay = "Idle"
+anims/Idle = SubResource( 104 )
+anims/RESET = SubResource( 105 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money68"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money69" type="Area2D" parent="."]
+position = Vector2( -159, -133 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money69"]
+position = Vector2( 392, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money69"]
+autoplay = "Idle"
+anims/Idle = SubResource( 106 )
+anims/RESET = SubResource( 107 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money69"]
+position = Vector2( 392, 446 )
+shape = SubResource( 49 )
+
+[node name="Money70" type="Area2D" parent="."]
+position = Vector2( -240, -156 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money70"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money70"]
+autoplay = "Idle"
+anims/Idle = SubResource( 108 )
+anims/RESET = SubResource( 109 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money70"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money71" type="Area2D" parent="."]
+position = Vector2( -240, -156 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money71"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money71"]
+autoplay = "Idle"
+anims/Idle = SubResource( 110 )
+anims/RESET = SubResource( 111 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money71"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money72" type="Area2D" parent="."]
+position = Vector2( -223, -156 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money72"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money72"]
+autoplay = "Idle"
+anims/Idle = SubResource( 112 )
+anims/RESET = SubResource( 113 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money72"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money73" type="Area2D" parent="."]
+position = Vector2( -203, -156 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money73"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money73"]
+autoplay = "Idle"
+anims/Idle = SubResource( 114 )
+anims/RESET = SubResource( 115 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money73"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money74" type="Area2D" parent="."]
+position = Vector2( -186, -156 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money74"]
+position = Vector2( 403, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money74"]
+autoplay = "Idle"
+anims/Idle = SubResource( 116 )
+anims/RESET = SubResource( 117 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money74"]
+position = Vector2( 403, 446 )
+shape = SubResource( 49 )
+
+[node name="Money75" type="Area2D" parent="."]
+position = Vector2( -159, -156 )
+script = ExtResource( 23 )
+
+[node name="MonedaD" type="Sprite" parent="Money75"]
+position = Vector2( 392, 446 )
+texture = ExtResource( 22 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Money75"]
+autoplay = "Idle"
+anims/Idle = SubResource( 118 )
+anims/RESET = SubResource( 119 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Money75"]
+position = Vector2( 392, 446 )
+shape = SubResource( 49 )
+
 [connection signal="body_entered" from="Money" to="Money" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Money2" to="Money2" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Money3" to="Money3" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money40" to="Money40" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money41" to="Money41" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money42" to="Money42" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money43" to="Money43" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money44" to="Money44" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money45" to="Money45" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money46" to="Money46" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money47" to="Money47" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money48" to="Money48" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money49" to="Money49" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money50" to="Money50" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money51" to="Money51" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money52" to="Money52" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money53" to="Money53" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money54" to="Money54" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money55" to="Money55" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money56" to="Money56" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money57" to="Money57" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money58" to="Money58" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money59" to="Money59" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money60" to="Money60" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money61" to="Money61" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money62" to="Money62" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money63" to="Money63" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money64" to="Money64" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money65" to="Money65" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money66" to="Money66" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money67" to="Money67" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money68" to="Money68" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money69" to="Money69" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money70" to="Money70" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money71" to="Money71" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money72" to="Money72" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money73" to="Money73" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money74" to="Money74" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Money75" to="Money75" method="_on_Area2D_body_entered"]
