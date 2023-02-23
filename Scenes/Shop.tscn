@@ -1,0 +1,967 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Idle_shield (32x32).png" type="Texture" id=2]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" type="Texture" id=3]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Wall Jump (32x32).png" type="Texture" id=4]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" type="Texture" id=5]
+[ext_resource path="res://Free/Music/jump-climb-or-damage-sound-f-95942.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Free/Music/cartoon-jump-6462.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" type="Texture" id=8]
+[ext_resource path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" type="Texture" id=9]
+[ext_resource path="res://Free/Music/coin.wav" type="AudioStream" id=10]
+[ext_resource path="res://Free/Terrain/Terrain (16x16).png" type="Texture" id=11]
+[ext_resource path="res://Free/Items/Boxes/Box1/Idle.png" type="Texture" id=12]
+[ext_resource path="res://Free/Items/Boxes/Box2/Idle.png" type="Texture" id=13]
+[ext_resource path="res://Free/Items/Boxes/Box3/Idle.png" type="Texture" id=14]
+[ext_resource path="res://Free/Coin_Gems/MonedaD.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/Boxes.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/Money_couner.gd" type="Script" id=17]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.5
+rough = true
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 20.0781 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Hit"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.343506, 0.401856 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.186523, 0.216797 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 84, -13 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 9 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 12 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.186523, 0.216797 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 84, -13 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Run"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 85, -8 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.382812, 0.421387 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Shield"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 83, -8 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.196517, 0.198669 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "WallJump"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 4, 4 ]
+}
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 581, 23 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 124.438, 23 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 15.75, 13.25 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="RigidBody2D" parent="."]
+position = Vector2( 112, 540 )
+input_pickable = true
+mode = 2
+physics_material_override = SubResource( 1 )
+gravity_scale = 5.0
+contacts_reported = 1000
+contact_monitor = true
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( 84, -13 )
+scale = Vector2( 0.186523, 0.216797 )
+texture = ExtResource( 9 )
+hframes = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 83, -6 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="Player"]
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 7 )
+
+[node name="Hurt" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+anims/Hit = SubResource( 3 )
+anims/Idle = SubResource( 4 )
+anims/RESET = SubResource( 5 )
+anims/Run = SubResource( 6 )
+anims/Shield = SubResource( 7 )
+anims/WallJump = SubResource( 8 )
+
+[node name="Coin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Platform1" type="StaticBody2D" parent="Obstacles"]
+position = Vector2( 566, 3 )
+
+[node name="Platform2" type="StaticBody2D" parent="Obstacles"]
+position = Vector2( 566, 3 )
+
+[node name="Platform3" type="StaticBody2D" parent="Obstacles"]
+position = Vector2( 566, 3 )
+
+[node name="platform2" type="StaticBody2D" parent="Obstacles"]
+position = Vector2( 662, 4 )
+
+[node name="Floor" type="StaticBody2D" parent="Obstacles"]
+position = Vector2( 1025, 4 )
+
+[node name="Sprite2" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -996, 582 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite3" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -946.5, 582 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite4" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -900, 583 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite5" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -850.5, 583 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite6" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -806, 583 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite7" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -756.5, 583 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite8" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -710, 584 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite9" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -660.5, 584 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite10" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -620, 584 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite11" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -570.5, 584 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite12" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -524, 585 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite13" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -474.5, 585 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite14" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -430, 585 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite15" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -380.5, 585 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite16" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -334, 586 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite17" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -284.5, 586 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite18" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -248, 586 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite19" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -198.5, 586 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite20" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -152, 587 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite21" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -102.5, 587 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite22" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -58, 587 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite23" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( -8.5, 587 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( 87.5, 588 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="Sprite24" type="Sprite" parent="Obstacles/Floor"]
+position = Vector2( 38, 588 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Obstacles/Floor"]
+position = Vector2( -447, 579 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Obstacles/Floor"]
+position = Vector2( -451, -21 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Obstacles/Floor"]
+position = Vector2( 0, 279 )
+rotation = 1.5708
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Obstacles/Floor"]
+position = Vector2( -1032, 301 )
+rotation = 1.5708
+shape = SubResource( 9 )
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2( 242, 144 )
+
+[node name="Sprite5" type="Sprite" parent="Platform2"]
+position = Vector2( -75.4999, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="Platform2"]
+position = Vector2( -171.5, 286 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite4" type="Sprite" parent="Platform2"]
+position = Vector2( -125, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite6" type="Sprite" parent="Platform2"]
+position = Vector2( -39, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite7" type="Sprite" parent="Platform2"]
+position = Vector2( 10.5, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform2"]
+position = Vector2( -75.25, 280 )
+shape = SubResource( 10 )
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2( 642, 144 )
+
+[node name="Sprite5" type="Sprite" parent="Platform3"]
+position = Vector2( -103.5, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="Platform3"]
+position = Vector2( -199.5, 286 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite4" type="Sprite" parent="Platform3"]
+position = Vector2( -153, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite6" type="Sprite" parent="Platform3"]
+position = Vector2( -66.9999, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite7" type="Sprite" parent="Platform3"]
+position = Vector2( -17.4999, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform3"]
+position = Vector2( -103.25, 280 )
+shape = SubResource( 10 )
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2( 970, 144 )
+
+[node name="Sprite5" type="Sprite" parent="Platform4"]
+position = Vector2( -75.4999, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="Platform4"]
+position = Vector2( -171.5, 286 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite4" type="Sprite" parent="Platform4"]
+position = Vector2( -125, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite6" type="Sprite" parent="Platform4"]
+position = Vector2( -39, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Sprite7" type="Sprite" parent="Platform4"]
+position = Vector2( 10.5, 287 )
+scale = Vector2( 1.05682, 1 )
+texture = ExtResource( 11 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform4"]
+position = Vector2( -75.25, 280 )
+shape = SubResource( 10 )
+
+[node name="MonedaD" type="Sprite" parent="."]
+position = Vector2( 177, 327 )
+texture = ExtResource( 15 )
+hframes = 5
+
+[node name="MonedaD2" type="Sprite" parent="."]
+position = Vector2( 565, 337 )
+texture = ExtResource( 15 )
+hframes = 5
+
+[node name="MonedaD3" type="Sprite" parent="."]
+position = Vector2( 923, 338 )
+texture = ExtResource( 15 )
+hframes = 5
+
+[node name="Boxes" type="Node2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="1st box" type="Area2D" parent="Boxes"]
+
+[node name="Idle" type="Sprite" parent="Boxes/1st box"]
+position = Vector2( 156, 382 )
+scale = Vector2( 1.82143, 1.66667 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boxes/1st box"]
+position = Vector2( 156, 381 )
+shape = SubResource( 11 )
+
+[node name="2nd box" type="Area2D" parent="Boxes"]
+
+[node name="Idle2" type="Sprite" parent="Boxes/2nd box"]
+position = Vector2( 548, 383 )
+scale = Vector2( 1.57143, 1.45833 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boxes/2nd box"]
+position = Vector2( 548, 381 )
+shape = SubResource( 11 )
+
+[node name="3rd box" type="Area2D" parent="Boxes"]
+
+[node name="Idle" type="Sprite" parent="Boxes/3rd box"]
+position = Vector2( 903, 384 )
+scale = Vector2( 1.34984, 1.33333 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Boxes/3rd box"]
+position = Vector2( 904, 384 )
+shape = SubResource( 11 )
+
+[node name="Text" type="Node2D" parent="."]
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="Text"]
+margin_left = 396.0
+margin_top = 500.0
+margin_right = 562.0
+margin_bottom = 521.0
+text = "Obecnie masz:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Text"]
+margin_left = 299.0
+margin_top = 253.0
+margin_right = 1241.0
+margin_bottom = 274.0
+text = "Tu mozesz kupowac ulepszenia co kazde podejscie by bylo ci latwiej"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Text"]
+margin_left = 362.0
+margin_top = 12.0
+margin_right = 711.0
+margin_bottom = 45.0
+text = "
+							O to kilka podstaw: 
+
+"
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Text"]
+margin_left = 24.0
+margin_top = 69.0
+margin_right = 966.0
+margin_bottom = 133.0
+text = "poruszasz sie strzałkami
+
+r - szybki restart do 1 poziomu
+
+
+"
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Text"]
+margin_left = 315.0
+margin_top = 69.0
+margin_right = 1009.0
+margin_bottom = 179.0
+tab_size = 6
+text = "Postac ktora grasz to nie zwykla zaba, zaba ta jest polaczona z wszystkim co zywe (lub prawie zywe), wiec aby wygrac nie musisz koniecznie dojsc do pucharu - mozesz wrzucic tam np groszek z roslinki. Jednak gdy groch otrzyma obrazenia to ty tez.  "
+scroll_active = false
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Text"]
+margin_left = 408.0
+margin_top = 166.0
+margin_right = 1037.0
+margin_bottom = 287.0
+text = "Reszty dowiesz sie w trakcie gry.
+
+Wciśnij r aby rozpoczac"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="Text"]
+margin_left = 138.0
+margin_top = 320.0
+margin_right = 178.0
+margin_bottom = 336.0
+text = "300 "
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="Text"]
+margin_left = 526.0
+margin_top = 330.0
+margin_right = 566.0
+margin_bottom = 346.0
+text = "600"
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="Text"]
+margin_left = 884.0
+margin_top = 331.0
+margin_right = 924.0
+margin_bottom = 347.0
+text = "900"
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="Text"]
+margin_left = 93.0
+margin_top = 460.0
+margin_right = 363.0
+margin_bottom = 500.0
+text = "50% wiecej zycia"
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="Text"]
+margin_left = 826.0
+margin_top = 459.0
+margin_right = 1096.0
+margin_bottom = 499.0
+text = "Tarcze dzialaja dluzej"
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="Text"]
+margin_left = 443.0
+margin_top = 459.0
+margin_right = 713.0
+margin_bottom = 499.0
+text = "Juz nie odbijasz sie po arbuzie"
+
+[node name="Money4" type="Area2D" parent="."]
+position = Vector2( 261, 479 )
+script = ExtResource( 17 )
+
+[node name="MonedaD2" type="Sprite" parent="Money4"]
+position = Vector2( 250, 30 )
+texture = ExtResource( 15 )
+hframes = 5
+
+[node name="Money_count" type="RichTextLabel" parent="Money4"]
+margin_left = 268.0
+margin_top = 22.0
+margin_right = 307.0
+margin_bottom = 49.0
+tab_size = 6
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="body_entered" from="Boxes/1st box" to="Boxes" method="_on_1st_box_body_entered"]
+[connection signal="body_entered" from="Boxes/2nd box" to="Boxes" method="_on_2nd_box_body_entered"]
+[connection signal="body_entered" from="Boxes/3rd box" to="Boxes" method="_on_3rd_box_body_entered"]

@@ -4011,15 +4011,15 @@ anims/RESET = SubResource( 34 )
 script = ExtResource( 31 )
 
 [node name="MonedaD2" type="Sprite" parent="Money4"]
-position = Vector2( 282, 23 )
+position = Vector2( 263, 22 )
 scale = Vector2( 1.75, 2.125 )
 texture = ExtResource( 32 )
 hframes = 5
 
 [node name="Money_count" type="RichTextLabel" parent="Money4"]
-margin_left = 251.0
+margin_left = 287.0
 margin_top = 12.0
-margin_right = 290.0
+margin_right = 326.0
 margin_bottom = 39.0
 tab_size = 6
 text = "0"

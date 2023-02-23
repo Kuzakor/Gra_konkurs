@@ -13,7 +13,7 @@ func _ready():
 
 func _physics_process(delta):
 	if len(get_colliding_bodies()) > 1:
-		get_tree().change_scene("res://Scenes/level5.tscn")
+		get_tree().change_scene("res://Scenes/level6.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

@@ -2886,16 +2886,16 @@ text = " W lewym gornym rogu widzisz pasek zycia - jezeli stracisz cale zycie - 
 script = ExtResource( 23 )
 
 [node name="MonedaD2" type="Sprite" parent="Money4"]
-position = Vector2( 282, 23 )
-scale = Vector2( 1.75, 2.125 )
+position = Vector2( 250.5, 23 )
+scale = Vector2( 1.8125, 2.125 )
 texture = ExtResource( 24 )
 hframes = 5
 
 [node name="Money_count" type="RichTextLabel" parent="Money4"]
-margin_left = 251.0
-margin_top = 12.0
-margin_right = 290.0
-margin_bottom = 39.0
+margin_left = 280.0
+margin_top = 15.0
+margin_right = 319.0
+margin_bottom = 42.0
 tab_size = 6
 text = "0"
 
