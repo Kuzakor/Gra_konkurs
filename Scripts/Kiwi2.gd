@@ -17,5 +17,9 @@ func _ready():
 onready var global = get_node("/root/Global")
 
 func _on_Kiwi2_body_entered(body):
-	global.shield = 50
+	if global.long_shield:
+		global.shield = 100
+	else:
+		global.shield = 50
+	
 	queue_free() # Replace with function body.

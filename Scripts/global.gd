@@ -12,9 +12,8 @@ var reverse = false
 var shield = 0
 var jump_boost = false
 var money = 0
-var is_pause = false
-
-var pause
+var no_jump = false
+var long_shield = false
 var current_money
 
 func _process(delta):
@@ -26,13 +25,7 @@ func _process(delta):
 			print("dzyn")
 			
 	if Input.is_action_just_pressed("esc"):
-		if not is_pause:
-			pause = get_tree().get_current_scene()
 			get_tree().change_scene("res://Scenes/menu.tscn")
-			is_pause = true
-		else:
-			get_tree().change_scene_to(pause)
-			is_pause = false
 			
 	if Input.get_action_strength("r"):
 		health = 300 + health_rise
@@ -40,9 +33,12 @@ func _process(delta):
 		shield = 0
 		reverse = false
 		jump_boost = false
+		get_tree().change_scene("res://Scenes/Node2D.tscn")
+	if no_jump: 
+		bounce = false
 		
 
-		get_tree().change_scene("res://Scenes/Node2D.tscn")
+		
 	current_money = money
 	
 	

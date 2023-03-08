@@ -4,7 +4,7 @@
 [ext_resource path="res://Free/Terrain/Terrain (16x16).png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Flame.gd" type="Script" id=3]
 [ext_resource path="res://Free/Traps/Fire/On (16x32).png" type="Texture" id=4]
-[ext_resource path="res://Scripts/Finish5.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Finish4.gd" type="Script" id=5]
 [ext_resource path="res://Free/Items/Checkpoints/End/End (Pressed) (64x64).png" type="Texture" id=6]
 [ext_resource path="res://Scripts/Kiwi2.gd" type="Script" id=7]
 [ext_resource path="res://Free/Items/Fruits/Kiwi.png" type="Texture" id=8]
