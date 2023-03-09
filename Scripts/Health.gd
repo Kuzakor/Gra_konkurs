@@ -1,27 +1,14 @@
 extends RigidBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+#Importuje główny skrypt
 onready var global = get_node("/root/Global")
 
-# Called when the node enters the scene tree for the first time.
-	 # Replace with function body.
-func _process(delta):
-	$AnimatedSprite.set_frame(6 - global.health/50)
 
+func _process(delta):
+	#Ustawia klatke animacji zdrowia
+	$AnimatedSprite.set_frame(6 - global.health/50)
+	#Przekierowuje do sceny "koniec gry" gdy zdrowie jest mniejsze od 0
 	if global.health < 0:
 		get_tree().change_scene("res://Scenes/You dead screen.tscn")
 
-			
-			
-		
-#
-#
-#	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

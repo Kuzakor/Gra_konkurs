@@ -1,23 +1,19 @@
 extends RigidBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var vel = Vector2.ZERO
 var jump_high = 0
 
-
+#Importuje główny skrypt i scene muzyki
 onready var global = get_node("/root/Global")
 onready var music = get_node("/root/Music")
 onready var hp_befeore = global.health
 onready var hp_after = global.health
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	$AudioStreamPlayer.volume_db = global.sound
 	$Hurt.volume_db = global.sound
 	set_gravity_scale(10)
-	 # Replace with function body.
+
 
 func _physics_process(delta):
 	if global.bounce:
@@ -59,6 +55,4 @@ func _physics_process(delta):
 		jump_high = 25000
 		
 	apply_impulse(Vector2.ZERO, Vector2(vel.x * delta * 800 , vel.y *delta*jump_high))
-	# Replace with function body.
 
-# Replace with function body.

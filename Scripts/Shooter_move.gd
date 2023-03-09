@@ -1,14 +1,5 @@
 extends RigidBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 var which_child = 3
 var active = false
 	
@@ -34,7 +25,3 @@ func _physics_process(delta):
 				get_child(which_child).set_script(load("res://Scripts/Bullet.gd"))
 				
 				which_child += 1
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

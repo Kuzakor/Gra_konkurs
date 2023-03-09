@@ -1,25 +1,11 @@
 extends Area2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-#	pass
+#Importuje główny skrypt
 onready var global = get_node("/root/Global")
 
+#Gdy ciało wejdzie w obszar ustawia globalna zmienna jump_boost na true i ususwa siebie
 func _on_Apple_body_entered(body):
 	global.jump_boost = true
-	queue_free() # Replace with function body.
-
+	queue_free() 
 
 
