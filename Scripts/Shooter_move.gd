@@ -3,6 +3,8 @@ extends RigidBody2D
 var which_child = 3
 var active = false
 	
+	
+#To samo co Shooter.gd ale aktywuje się dopiero po kolizji z 2 obiektami na raz.
 func _physics_process(delta):
 
 	if len(get_colliding_bodies()) > 1:

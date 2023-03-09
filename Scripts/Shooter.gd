@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var which_child = 3
 
-	
+#Co jedno wykonanie animacji (na timestamp 0.3) tworzy groszek o podanych parametrach
 func _physics_process(delta):
 	if $AnimationPlayer.get_current_animation_position() >= 0.3:
 		if $AnimationPlayer.get_current_animation_position() < 0.32:
